@@ -19,7 +19,7 @@ export const Projects = () =>{
       imageUrl: 'https://as2.ftcdn.net/v2/jpg/02/76/14/91/1000_F_276149120_Jl8kKWneUc16dTfH2HYj0KShoAaKGWXQ.jpg',
       url : `http://sooparkle.dothome.co.kr/`,
       github : "https://github.com/theshack8/kgc_team_project",
-      libraries : ['Vanilla JS', 'HTML5','CSS', 'PPT 및 기획', ]
+      keywords : ['Vanilla JS', 'HTML5','CSS', 'PPT 및 기획', ]
     },
     {
       title: 'Project 2',
@@ -32,7 +32,7 @@ export const Projects = () =>{
       url : 'https://library-62r.pages.dev',
       github : 'https://github.com/Sooparkle/Library/tree/renewerlibrary',
       gitServer : 'https://github.com/Sooparkle/pj3_server/tree/main',
-      libraries : ['react-router-dom', 'react-redux',`react-reduxjs/\ntoolkit`, 'react-datepicker', '공공데이터 API']
+      keywords : ['react-router-dom', 'react-redux',`react-reduxjs/\ntoolkit`, 'react-datepicker', '공공데이터 API']
     },
     {
       title: 'Project 3',
@@ -44,7 +44,7 @@ export const Projects = () =>{
       url : `https://project3-accom.pages.dev/`,
       github : 'https://github.com/Sooparkle/project3/tree/home',
       gitServer : 'https://github.com/Sooparkle/pj3_server/tree/main',
-      libraries : ['react-router-dom', 'react-redux', `react-reduxjs/\ntoolkit`, 'react-calendar',`Supabse`]
+      keywords : ['react-router-dom', 'react-redux', `react-reduxjs/\ntoolkit`, 'react-calendar',`Supabse`]
     },
   ];
 
@@ -94,8 +94,8 @@ export const Projects = () =>{
                     <p>{item.name}</p>
                     <p>기여도 : {item.contribution}</p>
                     <p>{item.description}</p>
-                    <ul className="project-libraries">
-                      { item.libraries.map((library) => 
+                    <ul className="project-keywords">
+                      { item.keywords.map((library) => 
                         <li key={library} > {library}</li>
                         )}
 

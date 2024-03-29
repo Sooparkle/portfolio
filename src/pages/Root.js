@@ -38,6 +38,7 @@ export const Root = () => {
 
   useEffect(()=>{
     const handleScrollY = () =>{
+      console.log("handleScrollY 작동중")
       const url = location.pathname;
       const scrollThreshold =null;
       if(url === "/"){
@@ -49,7 +50,7 @@ export const Root = () => {
         }
       }
       else {
-        const scrollThreshold = 0;
+        const scrollThreshold = -10;
         if (window.scrollY > scrollThreshold) {
           setShowSIdebar(true);
         } else{

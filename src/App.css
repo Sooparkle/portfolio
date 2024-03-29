@@ -148,7 +148,7 @@ nav svg{
 .intro-wrap{
   box-sizing: border-box;
   position: relative;
-  width: 100%;
+  width: auto;
   height: 100svh;
   display: grid;
   padding: 2rem 3rem;
@@ -243,7 +243,7 @@ nav svg{
 
 .intro-end::after{
   content: "";
-  width: 20px;
+  width: 30px;
   height: 2px;
   background: #fff;
   position: absolute;
@@ -255,8 +255,9 @@ nav svg{
 
 @keyframes move {
   from { transform: translateX(-120px); } 
-  to { transform: translateX(100px); } 
+  to { transform: translateX(12px); } 
 }
+
 
 @keyframes tagPosition {
   0% {
@@ -444,18 +445,18 @@ h2{
   margin-top: 20px;;
 }
 
-.project-libraries{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(40px, 100%), 1fr));
+.project-keywords{
+  display: flex;
+  flex-wrap: wrap;
   gap: 4px;
   margin-top: 8px;
 
 }
 
-.project-libraries li{
+.project-keywords li{
   place-content: center;
   display: inline-block;
-  font-size: 8px;
+  font-size: 10px;
   padding: .2rem .2rem;
   border: 1px solid var(--color-main);
   border-radius: 6px;
@@ -546,7 +547,7 @@ h2{
 /* contact wrap */
 .contact-wrap{
   box-sizing: border-box;
-  padding: 5rem 4rem;
+  padding: 9rem 4rem;
   display: grid;
   place-content: center;
   background: var(--color-light);

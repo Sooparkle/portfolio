@@ -10,6 +10,9 @@ import { Contact } from './components/Contact';
 
 
 function App() {
+  useEffect(()=>{
+    window.scrollTo(0,0)
+  },[])
 
   return (
     <>
