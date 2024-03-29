@@ -5,8 +5,9 @@ import pic from "../assets/pic_min.JPG.jpg";
 export const Who = () =>{
 
   return[
-    <>  
-      <div className='who-wrap'>
+    <div className="who-wrap container">
+      <h2>WHO AM I</h2>  
+      <div className='who-content'>
         <div className="who-img-wrap">
           <img src={pic} alt="증명사진"></img>
         </div>
@@ -14,7 +15,7 @@ export const Who = () =>{
           <p className="who-name">임수한</p>
           <p className="who-position">Frontend Developer</p>
           <p>
-            일정과 기획이라는 숲에서 나무를 보고 <span>직접 심을 수 있는</span><br />
+            일정과 기획이라는 숲에서 나무를 보고 <span>직접 심을 수 있는</span>
             프론트 엔드 개발작 하고 싶어서 커리어 전환을 결정했습니다.
           </p>
           <p></p>
@@ -28,6 +29,6 @@ export const Who = () =>{
           </div>
         </div>
       </div>
-  </>
+  </div>
   ]
 }

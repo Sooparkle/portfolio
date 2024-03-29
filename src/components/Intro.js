@@ -4,10 +4,29 @@ import  setting from "../assets/setting.svg";
 
 export const Intro = () =>{
 
+
   return(
     <div div className="intro-wrap">
       <div className="intro-top">a Manager</div>
-      <div className="intro-middle">SOOHANs'<br />PORTFOLIO</div>
+      <div className="intro-middle">
+        <span>S</span>
+        <span>O</span>
+        <span>O</span>
+        <span>H</span>
+        <span>A</span>
+        <span>N</span>
+        <span>'</span>
+        <span>s</span><br />
+        <span>P</span>
+        <span>O</span>
+        <span>R</span>
+        <span>T</span>
+        <span>F</span>
+        <span>O</span>
+        <span>L</span>
+        <span>I</span>
+        <span>O</span>
+        </div>
       <div className="intro-end">Front-End</div>
       <div className="intro-allow">
         <DownAllow className="intro-down-allow" />

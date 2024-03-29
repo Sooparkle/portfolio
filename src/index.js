@@ -8,6 +8,8 @@ import { Provider } from 'react-redux';
 import { Root } from './pages/Root';
 import { store } from './store/store';
 import { Projects } from './pages/Projects';
+import { Who } from './components/Who';
+import { Contact } from './components/Contact';
 // import reportWebVitals from './reportWebVitals';
 
 
@@ -23,6 +25,14 @@ const router = createBrowserRouter([
       {
         path:`${PAGE_LIST.PROJECTS}`,
         element:<Projects />
+      },
+      {
+        path:`${PAGE_LIST.WHO}`,
+        element:<Who />,
+      },
+      {
+        path :`${PAGE_LIST.CONTACT}`,
+        element:<Contact />
       }
     ]
   }

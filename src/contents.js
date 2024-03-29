@@ -3,5 +3,6 @@ export const PAGE_LIST ={
   MAIN : '/main',
   PROJECTS : '/projects',
   CONTACT : '/contact',
+  WHO : '/whoami',
 }
 

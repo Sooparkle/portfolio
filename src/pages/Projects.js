@@ -1,19 +1,25 @@
+import  React, {useEffect} from "react";
 import SoeulLocal from "../assets/Soeul_Local.png";
 import fetchAccom from "../assets/AccommodationFetch.png";
+import { Footer } from "./Footer";
 
 export const Projects = () =>{
+
+  useEffect(()=>{
+    window.scrollTo(0,0)
+  },[])
 
   const projects = [
     {
       title: 'Project 1',
-      isAble :false,
+      isAble :true,
       name : '배구, 정관장 레드스파크스 리뉴얼',
       description: '팀 프로젝트로, 정관장 레스 스파크스 홈페이지 리뉴얼',
       contribution : "33%",
       imageUrl: 'https://as2.ftcdn.net/v2/jpg/02/76/14/91/1000_F_276149120_Jl8kKWneUc16dTfH2HYj0KShoAaKGWXQ.jpg',
       url : `http://sooparkle.dothome.co.kr/`,
       github : "https://github.com/theshack8/kgc_team_project",
-      libraries : []
+      libraries : ['Vanilla JS', 'HTML5','CSS', 'PPT 및 기획', ]
     },
     {
       title: 'Project 2',
@@ -26,19 +32,19 @@ export const Projects = () =>{
       url : 'https://library-62r.pages.dev',
       github : 'https://github.com/Sooparkle/Library/tree/renewerlibrary',
       gitServer : 'https://github.com/Sooparkle/pj3_server/tree/main',
-      libraries : ['react-router-dom', 'react-redux', 'react-reduxjs/toolkit', 'react-datepicker']
+      libraries : ['react-router-dom', 'react-redux',`react-reduxjs/\ntoolkit`, 'react-datepicker', '공공데이터 API']
     },
     {
       title: 'Project 3',
       isAble :true,
       name : "좀쉼쉼",
-      description: '통신 서비스 flow의 이해와 Fetch 연습을 위한 숙박 사이트 기획',
+      description: 'Client부터 DB까지 직접 설계 및 Fetch 통신 가능 숙박 사이트 기획',
       contribution : "100%",
       imageUrl: `${fetchAccom}`,
       url : `https://project3-accom.pages.dev/`,
       github : 'https://github.com/Sooparkle/project3/tree/home',
       gitServer : 'https://github.com/Sooparkle/pj3_server/tree/main',
-      libraries : ['react-router-dom', 'react-redux', 'react-reduxjs/toolkit', 'react-calendar']
+      libraries : ['react-router-dom', 'react-redux', `react-reduxjs/\ntoolkit`, 'react-calendar',`Supabse`]
     },
   ];
 
@@ -74,7 +80,7 @@ export const Projects = () =>{
 
   return(
     <>
-      <div className="project-wrap">
+      <div className="project-wrap container">
       <h2>PROJECTS <span>(현재 총 : {projects.length} 개)</span></h2>
         <div className="project-each-wrap">
           {
@@ -95,9 +101,9 @@ export const Projects = () =>{
 
                     </ul>
                     <div className="project-icon-wrap">
-                      <button >Github</button>
+                      <button onClick={()=>handleOpenGithub(item)} >Github</button>
                       <button onClick={()=>handleOpenDemo(item)}>Live Demo</button>
-                      <button
+                      <button onClick={()=>handleOpenServer(item)}
                       >Github Sever</button>
                     </div>
 
