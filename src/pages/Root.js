@@ -16,8 +16,6 @@ export const Root = () => {
 
   useEffect(()=>{
     const handleResize = () =>{
-
-      console.log("handleResize 작동")
       if(window.innerWidth <775){
         setIsMobileSizeSmall(true)
       }

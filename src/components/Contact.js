@@ -1,11 +1,11 @@
-import { Footer } from "../pages/Footer"
+import React, { useEffect } from 'react';
 
 
 export const Contact =()=>{
   useEffect(()=>{
     window.scrollTo(0,0)
   },[])
-  
+
   return(
     <>
       <div className="contact-wrap">

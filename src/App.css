@@ -494,12 +494,19 @@ h2{
 .tech-wrap ul{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap:1.4rem
+  gap:3rem
 }
 
 .tech-wrap li {
   text-align: center;
   width:100%;
+}
+
+.tech-wrap li img{
+  margin-bottom: 20px;
+}
+.tech-wrap li p{
+  margin-bottom: 8px;
 }
 
 .html5{

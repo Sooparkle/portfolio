@@ -16,7 +16,7 @@ export const TechSkills = () =>{
         <li>
           <img className='js' src='https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg' alt="javascript" />
           <p>ES6 이후 기본 문법 구사 가능</p>
-          <p>Jquery 보단 Vanilla JS 추구</p>
+          <p>Jquery 보단 Vanilla JS 추구하여 JavaScript의 작동 원리 이해 추구</p>
         </li>
         <li>
           <img className='react' src='https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg' alt="react" />
