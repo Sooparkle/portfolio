@@ -1,8 +1,8 @@
 import  React, {useEffect} from "react";
-import SoeulLocal from "../assets/local20240331.png";
+import SoeulLocal from "../assets/Book.svg";
 import fetchAccom from "../assets/AccommodationFetch.png";
-import redSparks from "../assets/red_sparks.png";
-import accommodationImage from "../assets/accommodationImage.png";
+import redSparks from "../assets/VolleryBall.svg";
+import accommodationImage from "../assets/Sleep.svg";
 
 export const Projects = () =>{
 
@@ -15,7 +15,7 @@ export const Projects = () =>{
       title: 'Project 1',
       isAble :true,
       name : '배구, 정관장 레드스파크스 리뉴얼',
-      description: '팀 프로젝트로, 프로젝트 팀장으로써 일정과 프로젝트 방향성을 분석 정관장 레스 스파크스 홈페이지 리뉴얼',
+      description: '팀 프로젝트로(팀장 역할 수행), 정관장 레스 스파크스 홈페이지 리뉴얼',
       contribution : "40%",
       imageUrl: `${redSparks}`,
       url : `http://sooparkle.dothome.co.kr/`,
@@ -26,7 +26,7 @@ export const Projects = () =>{
       title: 'Project 2',
       isAble :true,
       name : "서울시 지역구 독서 베스트 대출 목록 확인 사이트",
-      description: '서울시 도서관 공공 API를 활용하여 하이퍼로컬이라는 콘셉을 활용하여 도서 대출 베스트 콘텐츠 사이트 기획',
+      description: '서울시 도서관 공공 API를 활용하여 구별 도서 베스트 대출 목록 확인 사이트 기획',
       contribution : "100%",
 
       imageUrl: `${SoeulLocal}`,
@@ -39,7 +39,7 @@ export const Projects = () =>{
       title: 'Project 3',
       isAble :true,
       name : "숙박 예약 사이트, 좀쉼쉼",
-      description: 'Client부터 DB까지 직접 설계하여 Fetch 통신을 통해 실제 서비스와 유한 사이트 기획. 나아가 일자와 추가 인원 가능한 숙박 사이트 기획',
+      description: 'Client부터 DB까지 직접 설계하여 Fetch 활용한 숙박 사이트 기획',
       contribution : "100%",
       imageUrl: `${accommodationImage}`,
       url : `https://project3-accom.pages.dev/`,

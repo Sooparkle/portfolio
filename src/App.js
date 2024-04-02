@@ -7,6 +7,7 @@ import { Who } from './components/Who';
 import { Projects } from './pages/Projects';
 import { TechSkills } from './components/TechSkills';
 import { Contact } from './components/Contact';
+import { Expereince } from './components/Experience';
 
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
       <Intro />
 
       <Who />
-
+      <Expereince />
       <Projects />
 
       <TechSkills />

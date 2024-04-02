@@ -1,6 +1,6 @@
 import {ReactComponent as LinkedIn } from "../assets/Linkedin.svg";
 import {ReactComponent as Github } from "../assets/github.svg";
-import pic from "../assets/pic_min.JPG.jpg";
+import pic from "../assets/main_pic.JPG.jpg";
 
 export const Who = () =>{
 
