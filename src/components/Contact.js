@@ -6,6 +6,8 @@ export const Contact =()=>{
     window.scrollTo(0,0)
   },[])
 
+
+
   return(
     <>
       <div className="contact-wrap">
@@ -16,15 +18,22 @@ export const Contact =()=>{
         </dl>
         <dl>
           <dt>Github</dt>
-          <dd>https://github.com/Sooparkle/</dd>
+          <dd 
+          className='contact-github'
+          onClick={()=>window.open("https://github.com/Sooparkle/", "_blank")}>https://github.com/Sooparkle/</dd>
         </dl>
         <dl>
           <dt>LinkedIn</dt>
-          <dd>https://www.linkedin.com/in/sooohan/</dd>
+          <dd
+          className='contact-linkedin'
+          onClick={()=>window.open("https://www.linkedin.com/in/sooohan/", "_blank")}
+          >https://www.linkedin.com/in/sooohan/</dd>
         </dl>
         <dl>
           <dt>Blog</dt>
-          <dd>https://life-explorer.tistory.com/</dd>
+          <dd 
+          className='contact-blog'
+          onClick={()=>window.open("https://life-explorer.tistory.com/", "_blank")}>https://life-explorer.tistory.com/</dd>
         </dl>
       </div>
     </>

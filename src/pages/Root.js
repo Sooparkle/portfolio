@@ -30,13 +30,10 @@ export const Root = () => {
     return () => window.removeEventListener("resize", handleResize)
   }, [])
 
-  useEffect(()=>{
-    console.log("isMobileView", isMobileView)
-  },[isMobileView])
+
 
   useEffect(()=>{
     const handleScrollY = () =>{
-      console.log("handleScrollY 작동중")
       const url = location.pathname;
       const scrollThreshold =null;
       if(url === "/"){

@@ -13,10 +13,9 @@ export const Who = () =>{
         </div>
         <div className="who-info-wrap">
           <p className="who-name">임수한</p>
-          <p className="who-position">Frontend Developer</p>
+          <p className="who-position">Front-end Developer</p>
           <p>
-            일정과 기획이라는 숲에서 나무를 보고 <span>직접 심을 수 있는</span>
-            프론트 엔드 개발작 하고 싶어서 커리어 전환을 결정했습니다.
+            기획자의 경험으로 <span>프로젝트의 전체를 이해</span>하고 매니저의 경험으로 <span>다양한 팀과 소통 경험을 바탕으로 </span>팀의 목적에 부합하는 프론트 엔드 개발자입니다.
           </p>
           <p></p>
           <div className="who-icons-wrap">

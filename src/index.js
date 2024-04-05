@@ -27,6 +27,10 @@ const router = createBrowserRouter([
         element:<Projects />
       },
       {
+        path:`${PAGE_LIST.PROJECTS}/:project1`,
+        element:<Projects />
+      },
+      {
         path:`${PAGE_LIST.WHO}`,
         element:<Who />,
       },
