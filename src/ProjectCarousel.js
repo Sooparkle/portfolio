@@ -17,7 +17,7 @@ export const ProjectCarousel = ({ projects }) => {
 const handleOpenNewTab = (project) => {
   console.log("project", project)
     if (project.isAble === true) {
-      window.open(project.url, "_blank", "noopener, noreferrer");
+      window.open(project.url, "_blank");
       return;
     } else {
       window.alert(`현재 유지보스 중입니다.\n빠른 시일내로 처리하겠습니다.`);

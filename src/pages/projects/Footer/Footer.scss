@@ -1,0 +1,24 @@
+footer{
+display: flex;
+justify-content: space-between;
+padding: 2rem .8rem;
+
+  ul{
+    display: flex;
+    gap : 2rem;
+  }
+
+  button{
+    all:unset;
+    cursor: pointer;
+
+    svg{
+    width: 38px;
+    height : 38px;
+
+    &:hover{
+      animation: squish 200ms ease-in-out;
+    }
+  }
+  }
+}

@@ -1,0 +1,123 @@
+/* intro area */
+.intro-wrap{
+  $typingNumber:14;
+  $typingSpeed : 6s;
+
+  
+  box-sizing: border-box;
+  position: relative;
+  width: auto;
+  height: 100vh;
+  display: grid;
+  margin: 0  1rem  2rem;
+  border-radius:  0 0 1rem 1rem;
+  background-color: var(--color-black);
+  color: var(--color-light);
+
+
+  > div{
+    display: block;
+  }
+  
+  .intro-top{
+    text-align: left;
+    margin-left: 1rem;
+    color: var(--color-strong);
+    // animation: fadeOut 4s ease-in-out infinite alternate;
+  }
+  
+  .intro-middle{
+    text-align: center;
+    font-size: var(--font-exttrem-2x);
+    width: max-content;
+    place-self: center;
+    letter-spacing: -0.4px;
+
+    > span {
+      position: relative;
+
+      &::before{
+        content: "CYBER MAKER.";
+        font-weight: 600;
+        animation: word 5s infinite;
+      }
+
+      &::after{
+        content: "";
+        position: absolute;
+        width:calc(100% + 14px);
+        height: 100%;
+        background:#000;
+        border-left: 2px solid #fff ;
+        right: -12px;
+        animation: 
+          cursor 750ms infinite, 
+          typing 5s steps($typingNumber) infinite;
+        animation-delay: .8s;
+      }
+    }
+  }
+
+
+  .intro-down-allow {
+    animation: tagMotion .8s ease-in-out infinite alternate;
+  
+  }
+  
+  
+  .intro-allow{
+    position: absolute;
+    width:40px;
+    left:50%;
+    bottom: 30px;
+    transform: translate(-50%, -50%);
+  }
+}
+
+
+
+@keyframes cursor{
+  to {border-left:2px solid #000 ;}
+}
+
+
+// @keyframes word{
+
+//   75%{
+//     content: "PORTFOLIO";
+//   }
+// }
+
+@keyframes typing {
+  25%, 75%{
+    width:0;
+  }
+  0%, 50%{
+    width:calc(100% + 14px)
+  }
+}
+
+
+
+
+@keyframes tagPosition {
+  0% {
+    transform: translateX(0) scaleX(1); /* Initial position and size */
+  }
+  50% {
+    transform: translateX(50px) scaleX(0.5); /* Move right and shrink width */
+  }
+  100% {
+    transform: translateX(0) scaleX(1); /* Return to initial position and size */
+  }
+}
+
+
+@keyframes tagMotion {
+  0% {
+    transform: translateY(0); /* Initial position */
+  }
+  100% {
+    transform: translateY(10px); /* Final position */
+  }
+}

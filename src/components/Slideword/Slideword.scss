@@ -1,0 +1,36 @@
+.slideword{
+  white-space: nowrap;
+  overflow: hidden;
+
+  &:hover{
+
+    .word-wrap{
+      animation-play-state: paused;
+    }
+  }
+
+  .word-wrap{
+    animation: 12s slide infinite linear;
+    display: inline-block;  
+  }
+  p{
+    font-weight: 200;
+    font-size: 80px;
+    // padding : 60px 50px 60px 0;
+    padding-left : 50px;
+    height: 100%;
+
+    > span{
+      font-weight: bold;
+    }
+  }
+}
+
+@keyframes slide{
+  from{
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}

@@ -76,7 +76,8 @@ export const Root = () => {
   }
   return (
     <>
-        <div className={`sidebar ${showSidebar ? 'sidebar-visible' : ''}`}>
+        <div className={`sidebar `}>
+        {/* <div className={`sidebar ${showSidebar ? 'sidebar-visible' : ''}`}> */}
         <div
         className={`logo `}
         onClick={()=>handleNavigate()}

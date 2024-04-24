@@ -1,0 +1,63 @@
+
+.tech-wrap{
+  box-sizing: border-box;
+  padding: 4rem 3rem;
+
+  h2{
+  padding-top: 20px;
+  border-top: 1px solid var(--color-light);
+  }
+
+  ul{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap:3rem;
+
+    li{
+      text-align: center;
+      width:100%;
+      padding: 1rem;
+      box-sizing: border-box;
+
+      > P{
+        text-align: left;
+        padding-left: 14px;
+        position: relative;
+        margin-bottom: 8px;
+      }
+
+      img{
+        margin-bottom: 20px;
+      }
+
+      .html5{
+        width: 100px;
+        height:120px
+      }
+      
+      .css{
+        width: 72px;
+        height:120px
+      }
+      
+      .js{
+        width:96px;
+        height:120px
+      }
+      
+      .react{
+        width:100px;
+        height:120px
+      }
+      .node{
+        width:100px;
+        height:120px
+      }
+    }
+  }
+}
+
+
+
+
+
