@@ -12,6 +12,8 @@ import './app.scss';
 
 
 function App() {
+  const [hasAnimated, setHasAnimated] = useState(false);
+  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -63,90 +65,58 @@ function App() {
 
   useEffect(() => {
     const observer = new IntersectionObserver(handleIntersection,
-      {threshold :.4}
+      {threshold :.2}
     );
-    if (introRef.current) {
-      observer.observe(introRef.current);
-    }
-    if (whoRef.current) {
-      observer.observe(whoRef.current);
-    }
-    if (experRef.current) {
-      observer.observe(experRef.current);
-    }
-    if (proRef.current) {
-      observer.observe(proRef.current);
-    }
-    if (techRef.current) {
-      observer.observe(techRef.current);
-    }
-    if (contactRef.current) {
-      observer.observe(contactRef.current);
-    }
-    if (footerRef.current) {
-      observer.observe(footerRef.current);
-    }
+      if (introRef.current) {
+        observer.observe(introRef.current);
+      }
+      if (whoRef.current) {
+        observer.observe(whoRef.current);
+      }
+      if (experRef.current) {
+        observer.observe(experRef.current);
+      }
+      if (proRef.current) {
+        observer.observe(proRef.current);
+      }
+      if (techRef.current) {
+        observer.observe(techRef.current);
+      }
+      if (contactRef.current) {
+        observer.observe(contactRef.current);
+      }
 
-    return () => { // Cleanup function to disconnect observer on unmount
+
+    return () => { 
       observer.disconnect();
     };
-  }, [introRef.current, slideRef.current, whoRef.current, experRef.current, proRef.current, techRef.current, contactRef.current, footerRef.current]);
+  }, []);
+
 
   return (
-    // <>
-    //   <section ref={introRef} className={`tag ${isIntroVisible ? 'visible' : ''}`}>
-    //     <Intro />
-    //     {/* <Slideword /> */}
-    //   </section>
-
-    //   <section ref={whoRef} className={`who-tag ${isWhoVisible ? 'visible' : 'hidden'}`}>
-    //     <Who />
-    //   </section>
-
-    //   <section ref={experRef} className={`tag ${isExperVisible ? 'visible' : ''}`}>
-    //     <Expereince />
-    //   </section>
-
-    //   <section ref={proRef} className={`tag ${isProVisible ? 'visible' : ''}`}>
-    //     <Projects />
-    //   </section>
-
-    //   <section ref={techRef} className={`tag ${isTechVisible ? 'visible' : ''}`}>
-    //     <TechSkills />
-    //   </section>
-
-    //   <section ref={contactRef} className={`tag ${isContactVisible ? 'visible' : ''}`}>
-    //     <Contact />
-    //   </section>
-
-    //   <section ref={footerRef} className={`tag ${isFooterVisible ? 'visible' : ''}`}>
-    //     <Footer />
-    //   </section>
-    // </>
-
-        <>
-      <section >
+    <>
+      <section ref={introRef} className={`tag ${isIntroVisible ? 'visible' : ''}`}>
         <Intro />
         {/* <Slideword /> */}
       </section>
-    
-      <section >
+
+      <section ref={whoRef} className={`who-tag ${isWhoVisible ? 'visible' : ''}`}>
         <Who />
+      </section>
+
+      <section ref={experRef} className={`tag ${isExperVisible ? 'visible' : ''}`}>
         <Expereince />
       </section>
 
-      {/* <section >
-      </section> */}
-
-      <section >
+      <section ref={proRef} className={`tag ${isProVisible ? 'visible' : ''}`}>
         <Projects />
       </section>
 
-      <section >
+      <section ref={techRef} className={`tag ${isTechVisible ? 'visible' : ''}`}>
         <TechSkills />
       </section>
 
-      <section >
+      <section ref={contactRef} className={`tag ${isContactVisible ? 'visible' : ''}`}>
         <Contact />
       </section>
 
@@ -154,6 +124,7 @@ function App() {
         <Footer />
       </section>
     </>
+
   );
 }
 

@@ -21,9 +21,13 @@
   
   .intro-top{
     text-align: left;
-    margin-left: 1rem;
+    margin-left: 1.2rem;
+    margin-top: 10px;
     color: var(--color-strong);
-    // animation: fadeOut 4s ease-in-out infinite alternate;
+    opacity: 0;
+    transform: translateY(-1rem);
+    animation: fadeInOut 1s ease-in-out forwards;
+    animation-delay: 1.5s;
   }
   
   .intro-middle{
@@ -119,5 +123,12 @@
   }
   100% {
     transform: translateY(10px); /* Final position */
+  }
+}
+
+@keyframes fadeInOut {
+  to{
+    opacity: 1;
+    transform: translateY(0rem);
   }
 }

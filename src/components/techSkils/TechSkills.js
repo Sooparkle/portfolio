@@ -64,13 +64,15 @@ export const TechSkills = () =>{
             className="tech-content" 
           >
             <img className={skill.title.toLowerCase()} src={skill.img} alt={skill.title} />
+            <div className="tech-overlay">
             {
                 skill.texts.map((text)=>{
                   return(
-                  <p>{text}</p>
+                  <p >{text}</p>
                   )
                 })
               }
+              </div>
           </li>
           )
         })

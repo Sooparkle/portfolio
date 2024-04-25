@@ -1,11 +1,4 @@
-// .tag {
-//   opacity: 0; /* Initially invisible */
-//   transition: opacity 0.5s ease-in-out; /* Animation properties */
 
-//   .visible{
-//     opacity: 1;
-//   }
-// }
 
 
 
@@ -22,17 +15,16 @@
 
 .who-tag {
   opacity: 0; 
+  transform: translateX(-50%); 
   transition: transform 0.7s ease-in-out; 
 }
 
 .who-tag.visible {
   opacity: 1;
-  transform: translateX(0%); /* Initial position */
+  transform: translateX(0%); 
 }
 
-.who-tag.hidden {
-  transform: translateX(-50%); 
-}
+
 
 @media(prefers-reduced-motion){
   .who-tag {
