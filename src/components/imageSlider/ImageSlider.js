@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import './ImageSlider.scss';
 import { FaAnglesLeft } from "react-icons/fa6";
 import { FaAnglesRight } from "react-icons/fa6";
@@ -6,7 +6,7 @@ import { GoDotFill } from "react-icons/go";
 import { GoDot } from "react-icons/go";
 
 export const ImageSlider = ({imageUrls}) => {
-  const [imageIndex, setImageIndex] = useState(0)
+  const [imageIndex, setImageIndex] = useState(0);
 
   const showPrevImages = () =>{
     setImageIndex(index =>{
@@ -21,6 +21,8 @@ export const ImageSlider = ({imageUrls}) => {
       return index +1
     })
   }
+
+
 
   return(
     <div className="who-slider">

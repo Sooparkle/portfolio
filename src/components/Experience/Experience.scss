@@ -33,6 +33,10 @@
           border-radius: 18px;
           text-align: center;
 
+          > p:nth-last-of-type(1){
+            font-size: 12px;
+          }
+
       }
 
       .experience-left-flex{
@@ -76,11 +80,13 @@
             background: #e7e7e7;
             text-align: center;
             position: relative;
+            transition: all 500ms ease-in-out;
 
 
             &:hover{
               cursor: pointer;
               background: #ffffff;
+              border-radius: 3rem;
             }
 
             > p:nth-of-type(1){
@@ -96,7 +102,7 @@
 
         .front-end{
           position: fixed;
-          top:50%;
+          top:70%;
           left: 50%;
           transform: translate(-50%, -50%) scale(0);
           transition: transform .3s ease-in-out;
@@ -140,7 +146,7 @@
 
         .uiux{
           position: fixed;
-          top:50%;
+          top:72%;
           left: 50%;
           transform: translate(-50%, -50%) scale(0);
           transition: transform .3s ease-in-out;
@@ -212,10 +218,13 @@
   }
 
   .experience-left-linkedin{
-    margin-inline: auto;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
     cursor: pointer;
     width:38px;
-    padding-top: 3rem;
   }
 }
 

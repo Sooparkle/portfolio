@@ -154,15 +154,16 @@
   }
   
   /* project Popup area */
-  .project-popup{
-
-    position: fixed;
-    top:50%;
+  .project-popup1
+  {
+    position: absolute;
+    top:22%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
     transition: transform .3s ease-in-out;
     min-width: 300px;
-    max-width: 800px;;
+    max-width: 800px;
+    width: 100%;
     min-height: 200px;
     max-height: 400px;
     background: #fff;
@@ -174,8 +175,9 @@
     z-index: 10;
 
     p:nth-of-type(1){
+      display: flex;
+      justify-content: space-between;
       margin: 1rem 0;
-      text-align: center;
     }
 
     .popup-project1 {
@@ -234,6 +236,172 @@
     }
   }
   
+  .project-popup2
+  {
+    position: fixed;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform .3s ease-in-out;
+    min-width: 300px;
+    max-width: 800px;
+    width: 100%;
+    min-height: 200px;
+    max-height: 400px;
+    background: #fff;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.12);
+    overflow-y: scroll;
+    box-sizing: border-box;
+    padding: 1rem 1.8rem;
+    border-radius: 16px;
+    z-index: 10;
+
+    p:nth-of-type(1){
+
+      display: flex;
+      justify-content: space-between;
+      margin: 1rem 0;
+
+    }
+
+    .popup-project1 {
+      display: grid;
+      gap: 4rem;
+
+      img{
+        display: inline-block;
+        min-width: 250px;
+        width: 100%;;
+        margin-bottom: 20px;
+      }
+
+      > div > p:nth-of-type(1) {
+        margin: 1rem 0;
+        font-weight: 600;
+        text-align: center;
+
+      }
+    }
+
+    .popup-project2 {
+      display: grid;
+      gap: 4rem;
+
+      img{
+        display: inline-block;
+        min-width: 250px;
+        width: 100%;;
+        margin-bottom: 20px;
+      }
+
+      > div > p:nth-of-type(1){
+        margin: 1rem 0;
+        font-weight: 600;
+        text-align: center;
+      }
+    }
+
+    .popup-project3{
+      display: grid;
+      gap: 4rem;
+
+      img{
+        display: inline-block;
+        min-width: 250px;
+        width: 100%;;
+        margin-bottom: 20px;
+      }
+
+      > div > p:nth-of-type(1){
+        margin: 1rem 0;
+        font-weight: 600;
+        text-align: center;
+      } 
+    }
+  }
+
+  .project-popup3
+  {
+    position: fixed;
+    top:78%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform .3s ease-in-out;
+    min-width: 300px;
+    max-width: 800px;
+    width: 100%;
+    min-height: 200px;
+    max-height: 400px;
+    background: #fff;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.12);
+    overflow-y: scroll;
+    box-sizing: border-box;
+    padding: 1rem 1.8rem;
+    border-radius: 16px;
+    z-index: 10;
+
+    p:nth-of-type(1){
+      display: flex;
+      justify-content: space-between;
+      margin: 1rem 0;
+
+    }
+
+    .popup-project1 {
+      display: grid;
+      gap: 4rem;
+
+      img{
+        display: inline-block;
+        min-width: 250px;
+        width: 100%;;
+        margin-bottom: 20px;
+      }
+
+      > div > p:nth-of-type(1) {
+        margin: 1rem 0;
+        font-weight: 600;
+        text-align: center;
+
+      }
+    }
+
+    .popup-project2 {
+      display: grid;
+      gap: 4rem;
+
+      img{
+        display: inline-block;
+        min-width: 250px;
+        width: 100%;;
+        margin-bottom: 20px;
+      }
+
+      > div > p:nth-of-type(1){
+        margin: 1rem 0;
+        font-weight: 600;
+        text-align: center;
+      }
+    }
+
+    .popup-project3{
+      display: grid;
+      gap: 4rem;
+
+      img{
+        display: inline-block;
+        min-width: 250px;
+        width: 100%;;
+        margin-bottom: 20px;
+      }
+
+      > div > p:nth-of-type(1){
+        margin: 1rem 0;
+        font-weight: 600;
+        text-align: center;
+      } 
+    }
+  }
 
   .visible{
     transform : translate(-50%, -50%) scale(1) ;
@@ -255,7 +423,6 @@
   svg {
     width: 30px;
     padding:.2rem;
-    margin-inline: 96%;
     cursor: pointer;
     vertical-align: bottom;
   }

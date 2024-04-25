@@ -7,12 +7,10 @@ import { Projects } from "./pages/projects/Projects";
 import { TechSkills } from "./components/techSkils/TechSkills";
 import { Contact } from "./components/contact/Contact";
 import { Expereince } from "./components/Experience/Experience";
-import { Slideword } from "./components/Slideword/Sildeword";
 import './app.scss';
 
 
 function App() {
-  const [hasAnimated, setHasAnimated] = useState(false);
   
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -65,7 +63,7 @@ function App() {
 
   useEffect(() => {
     const observer = new IntersectionObserver(handleIntersection,
-      {threshold :.2}
+      {threshold :.3}
     );
       if (introRef.current) {
         observer.observe(introRef.current);
@@ -100,7 +98,7 @@ function App() {
         {/* <Slideword /> */}
       </section>
 
-      <section ref={whoRef} className={`who-tag ${isWhoVisible ? 'visible' : ''}`}>
+      <section id="whoami" ref={whoRef} className={`who-tag ${isWhoVisible ? 'visible' : ''}`}>
         <Who />
       </section>
 
@@ -108,15 +106,15 @@ function App() {
         <Expereince />
       </section>
 
-      <section ref={proRef} className={`tag ${isProVisible ? 'visible' : ''}`}>
-        <Projects />
-      </section>
-
       <section ref={techRef} className={`tag ${isTechVisible ? 'visible' : ''}`}>
         <TechSkills />
       </section>
 
-      <section ref={contactRef} className={`tag ${isContactVisible ? 'visible' : ''}`}>
+      <section id="projects" ref={proRef} className={`tag visible`}>
+        <Projects />
+      </section>
+
+      <section id="extra" ref={contactRef} className={`tag ${isContactVisible ? 'visible' : ''}`}>
         <Contact />
       </section>
 

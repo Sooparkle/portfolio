@@ -2,7 +2,7 @@
 /* who area */
 .who-wrap{
   box-sizing: border-box;
-  padding:4rem 2rem 0 2rem;
+  padding:4rem 2rem 3rem;
 
   > h2{
     padding-top : 20px;
@@ -27,6 +27,7 @@
         object-fit: cover;
         box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
         animation : border 3.6s ease-in-out infinite;
+        cursor: pointer;
       }
     }
     
@@ -43,15 +44,59 @@
         font-weight: 700;
       }
 
-      .active{
+      .who-info-detail{
         display: block;
+        margin-bottom: 12px;
+        position: relative;
+        overflow: hidden;
+        border-bottom: 1px solid var(--color-light);
+
+        ul{
+          display: flex;
+          justify-content: space-between;
+
+          .right-btn{
+            transform: rotate(0);
+            transition: all 400ms linear;
+
+            &.activated{
+              transform: rotate(90deg);
+            }
+          }
+        }
+
+        > p{
+          height: 0;
+          transform: translateX(110%);
+          transition: all 1s ease-in-out;
+          overflow: hidden;
+          padding: .2rem 10px;
+          background: var(--color-light);
+          border-radius: 8px;;
+
+          &.activated{
+            transform: translateX(0);
+            height: 100%;
+          }
+        }
+
       }
 
-      li{
-        margin: 12px 0;
-        padding-left: 10px;
-        position: relative;
+      .who-name{
+        font-size: var(--font-exttrem);
+        font-weight: 500;
+        place-self: center;
+      }
 
+      .who-position{
+        width: fit-content;
+        background: var(--color-light);
+        /* border: 1px solid var(--color-light); */
+        color: var(--color-extreme);
+        padding : .2rem .5rem;
+        border-radius: 6px;;
+      
+      }
 
         
         > p {
@@ -76,21 +121,7 @@
 
       }
 
-      .who-name{
-        font-size: var(--font-exttrem);
-        font-weight: 500;
-        place-self: center;
-      }
 
-      .who-position{
-        width: fit-content;
-        background: var(--color-light);
-        /* border: 1px solid var(--color-light); */
-        color: var(--color-extreme);
-        padding : .2rem .5rem;
-        border-radius: 6px;;
-      
-      }
 
       .who-icons-wrap{
         display: grid;
@@ -109,8 +140,6 @@
 
   }
 
-
-}
 
 
 

@@ -1,7 +1,7 @@
 
 .tech-wrap{
   box-sizing: border-box;
-  padding: 6rem 3rem 4rem;
+  padding: 4rem 3rem 8rem;
 
   h2{
   padding-top: 20px;
@@ -12,6 +12,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap:3rem;
+    place-items: center;
 
     li{
       display: flex;
@@ -24,6 +25,7 @@
       border-radius: 1rem;
       position: relative;
       overflow: hidden;
+      cursor: pointer;
 
   
       .tech-overlay{
@@ -31,7 +33,7 @@
         bottom: 0;
         left: 0;
         right: 0;
-        background: rgb(0, 0, 0, 0.2);
+        background: rgb(0, 0, 0, 0.5);
         transition : 600ms ease-in-out;
         height: 0;
 
@@ -63,7 +65,16 @@
 
       &:hover .tech-overlay{
         height: 100%;
+        color: #fff;
+
+
       }
+      
+      &:hover img{
+        filter: blur(2px);
+      }
+
+
 
       &:focus-visible .tech-overlay{
         height: 100%;
@@ -81,31 +92,32 @@
       .html5{
         width: 100px;
         height:120px;
-        animation-delay: 1s;
       }
       
       .css{
-        width: 72px;
-        height:120px;
+        width:75px;
         animation-delay: 1.2s;
       }
       
       .js{
         width:96px;
-        height:120px;
-        animation-delay: 1s;
       }
       
       .react{
         width:100px;
-        height:120px;
-        animation-delay: 1s;
       }
+
       .node{
         width:100px;
-        height:120px;
-        animation-delay: 1s;
       }
     }
+  }
+
+
+  .tech-tip{
+    text-align: right;
+    margin-top: 20px;
+    color:var(--color-strong);
+    font-size : 12px;
   }
 }

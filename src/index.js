@@ -5,7 +5,7 @@ import App from './App';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { PAGE_LIST } from './contents';
 import { Provider } from 'react-redux';
-import { Root } from './pages/Root';
+import { Root } from './pages/root/Root';
 import { store } from './store/store';
 import { Projects } from './pages/projects/Projects';
 import { Who } from './components/who/Who';

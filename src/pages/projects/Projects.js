@@ -9,15 +9,11 @@ import SoeulLocal from "../../assets/local20240331.png";
 import whybook from "../../assets/whybook.png"
 import howbook from "../../assets/howbook.png"
 import whobook from "../../assets/whobook.png"
-import bookdetail  from"../../assets/bookdetail.png";
-import booklist  from"../../assets/booklist.png";
 import bookstacks from "../../assets/bookStacks.png"
 import accommodationImage from "../../assets/JejuAccomm.png";
 import order from "../../assets/order.png";
 import accomStacks from "../../assets/accomstacks.png";
 import accomLibraries from "../../assets/accomLibraries.png";
-import accomDetail from "../../assets/accomDetail.png";
-import accomConfirm from "../../assets/accomConfirm.png";
 import "./Project.scss";
 
 export const Projects = () => {
@@ -39,7 +35,7 @@ export const Projects = () => {
       description:
         "팀장 역할 수행하며, 페르소나와 포지셔닝 맵 등을 활용하여 UIUX 리뉴얼 진행",
       contribution: "40%",
-      imageUrl: [`${redSparks}`, `${playerRecord}`, `${ticket} `],
+      imageUrl: [`${redSparks}`],
       url: `http://sooparkle.dothome.co.kr/`,
       github: "https://github.com/theshack8/kgc_team_project",
       keywords: [
@@ -60,7 +56,7 @@ export const Projects = () => {
         "서울시 도서관 공공 API를 활용하여 지역구별 도서 베스트 대출 목록 통신",
       contribution: "100%",
 
-      imageUrl: [`${SoeulLocal}`, `${bookdetail}`,`${booklist}`],
+      imageUrl: [`${SoeulLocal}`],
       url: "https://library-62r.pages.dev",
       github: "https://github.com/Sooparkle/Library/tree/renewerlibrary",
       gitServer: "https://github.com/Sooparkle/pj3_server/tree/main",
@@ -81,7 +77,7 @@ export const Projects = () => {
       description:
         "Client,Server 그리고 DB까지 직접 설계하여, Fetch 활용한 사이트 구축",
       contribution: "100%",
-      imageUrl: [`${accommodationImage}`,`${accomDetail}`, `${accomConfirm}`],
+      imageUrl: [`${accommodationImage}`],
       url: `https://project3-accom.pages.dev/`,
       github: "https://github.com/Sooparkle/project3/tree/home",
       gitServer: "https://github.com/Sooparkle/pj3_server/tree/main",
@@ -158,12 +154,6 @@ const togglePopup =(index) => {
               <div key={index} className="project-each">
                 <div className="project-p">
                   <img className="project-p-img" src={item.imageUrl[0]} alt="" />
-                  {/* {
-                    item.imageUrl.map((img,index) => (
-                    <img src={img} className="project-p-img" />
-                    )
-                  )
-                  } */}
                 </div>
                 <div className="project-info">
                   <p className="first"> {item.name}</p>
@@ -177,7 +167,8 @@ const togglePopup =(index) => {
                   </ul>
                   <button 
                     onClick={()=>togglePopup(index)}
-                  >PPT 상세보기
+                  >
+                    과정 상세보기
                   </button>
                 </div>
                 <div className="project-icon-wrap">
@@ -200,7 +191,7 @@ const togglePopup =(index) => {
 
           {/* popup area */}
         <div
-          className={`project-popup ${openProject1 ? "visible" : ""}`}
+          className={`project-popup1 ${openProject1 ? "visible" : ""}`}
         >
           <p>
             <strong>Project1(팀) : 리뉴얼 방향성 및 UIUX</strong>
@@ -247,9 +238,9 @@ const togglePopup =(index) => {
           </div>
         </div>
 
-        
+        {/* project2 popup  */}
         <div
-          className={`project-popup ${openProject2 ? "visible" : ""}`}
+          className={`project-popup2 ${openProject2 ? "visible" : ""}`}
         >
           <p>
             <strong>Project2(개인) : 도서관 API </strong>
@@ -263,7 +254,7 @@ const togglePopup =(index) => {
                 - 전 회사가 도서관 홈페이지 관리 업체라 도서쪽 배경 지식의 이점 활용
               </p>
               <p>
-              - 더 이상 문해력은 경각심
+              - 성인 문해력 심화
 
               </p>
             </div>
@@ -273,38 +264,38 @@ const togglePopup =(index) => {
 
               <p>지역 대출 도서를 선택한 이유?, 어떤 대상인가?</p>
               <p>
-                - 당근의 하이퍼로컬 진출, 하이퍼로컬이란 ‘아주 좁은 범위의 특정 지역에 맞춘’이라는 의미
+                - 당근의 하이퍼로컬 진출, 하이퍼로컬이란 ‘아주 좁은 범위의 특정 지역에 맞춘’ 전략
               </p>
               <p>
-                - 대상으론, 지역 생활권 활동하는 '학부모' + '50 plus 어르신'
+                - 대상, 지역 생활권 활동하는 '학부모' + '50 plus 어르신'
               </p>
               <p>
-                - 책 읽기는 모든 학습의 기초 체력
+                - 책 읽기는 모든 학습의 기초 체력 방향성 시사
               </p>
             </div>
             <div>
               <img src={bookstacks} alt="tech stacks" />
               <p>Tech Stacks</p>
               <p>
-                - HTML5 + CSS + JS + React Github
+                - HTML5 + CSS + JS + React with Github
               </p>
             </div>
             <div>
               <p>React-Router-Dom</p>
               <p>
-                - 상세 페이지 이동을 위한 useNavigate Hook 사용
+                - 상세 페이지 이동, useNavigate Hook 사용
               </p>
               <p>
-                - useNavigate의 state로 최초 받은 정보를 재사용
+                - useNavigate의 state 활용하여 데이서 재사용
               </p>
             </div>
             <div>
               <p>React-Datepicker</p>
               <p>
-                - 2개의 Datapicker를 활용 하여 시작일과 종료일 설정 
+                - 2개의 Datapicker를 활용하여 시작일과 종료일 설정 
               </p>
               <p>
-                - POST 방식으로 node에서 통신(node를 처리한 이유는 CORS 이슈를 처리하기 위해서)
+                - POST 방식으로 node에서 통신(node를 처리한 이유는 CORS 이슈 처리)
               </p>
             </div>
             <div>
@@ -319,9 +310,9 @@ const togglePopup =(index) => {
           </div>
         </div>
 
-{/* project3 popup  */}
+        {/* project3 popup  */}
         <div
-          className={`project-popup ${openProject3 ? "visible" : ""}`}
+          className={`project-popup3 ${openProject3 ? "visible" : ""}`}
         >
           <p>
             <strong>Project3(개인) : Fetch 통신</strong>
@@ -343,7 +334,7 @@ const togglePopup =(index) => {
                 - Client : React, JS, HTML5, CSS
               </p>
               <p>- Middle : node</p>
-              <p>- DB : PostgreSQL</p>
+              <p>- DB : PostgreSQL via Supabase</p>
             </div>
 
             <div>
@@ -351,10 +342,10 @@ const togglePopup =(index) => {
 
               <p>사용한 라이브러리</p>
               <p>
-                - React-Router-Dom : 상세페이지 이동과 로그인 페이지로 이동 활용
+                - React-Router-Dom : 페이지 이동 및 state로 데이터 제사용
               </p>
-              <p>- React-calendar : 숙소 일자 선택 활용</p>
-              <p>- Redux + Redexjs/Toolkit : 로그인 완료시 DB로부터 전달 받은 데이터 전역으로 활용</p>
+              <p>- React-calendar : 숙박 일자 선택 활용</p>
+              <p>- Redux + Redexjs/Toolkit : 로그인 완료시 DB로부터 전달 받은 데이터 전역 활용</p>
             </div>
             <div>
 
