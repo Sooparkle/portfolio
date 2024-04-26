@@ -156,8 +156,8 @@
   /* project Popup area */
   .project-popup1
   {
-    position: absolute;
-    top:22%;
+    position: fixed;
+    top:33%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
     transition: transform .3s ease-in-out;
@@ -323,7 +323,7 @@
   .project-popup3
   {
     position: fixed;
-    top:78%;
+    top:70%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
     transition: transform .3s ease-in-out;

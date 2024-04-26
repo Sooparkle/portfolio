@@ -63,7 +63,7 @@ function App() {
 
   useEffect(() => {
     const observer = new IntersectionObserver(handleIntersection,
-      {threshold :.3}
+      {threshold :.25}
     );
       if (introRef.current) {
         observer.observe(introRef.current);
