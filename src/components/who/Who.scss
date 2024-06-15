@@ -5,6 +5,7 @@
   padding:4rem 2rem 3rem;
 
   > h2{
+    font-weight: 700;
     padding-top : 20px;
     border-top : 1px solid var(--color-light)
   }
@@ -19,7 +20,8 @@
     .who-img-wrap{
       // max-width: 1200px;
       width: 100%;
-      height: 380px;
+      height: 320px;
+
 
       .who-img-wrap img{
         width:250px;
@@ -54,6 +56,7 @@
         ul{
           display: flex;
           justify-content: space-between;
+          cursor: pointer;
 
           .right-btn{
             transform: rotate(0);
@@ -140,15 +143,10 @@
 
   }
 
-
-
-
-
-
-
-
-
-
+@keyframes autoScrolling {
+  0%{ transform: translateX(0);}
+  100% { transform: translateX(-100%);}
+}
 
 
 

@@ -12,32 +12,50 @@ h2{
   li{
 
     margin: 2rem 0;
+
+    & span {
+      display: flex;
+      align-items: center;
+      gap :10px;
+    }
   }
   
   .contact-github{
     cursor: pointer;
+    font-size: 1rem;
+    transition: font-size 800ms ease-in-out;
+
 
     &:hover{
       color: #676767;
-      animation: squish 200ms ease-in-out;
+      font-size: 1.15rem;
+      transition: font-size 300ms ease-in-out;
+
     }
   }
 
   .contact-linkedin{
     cursor: pointer;
+    font-size: 1rem;
+    transition: font-size 800ms ease-in-out;
+
 
     &:hover{
       color: #676767;
-      animation: squish 200ms ease-in-out;
+      font-size: 1.15rem;
+      transition: font-size 300ms ease-in-out;
     }
   }
 
   .contact-blog{
     cursor: pointer;
+    font-size: 1rem;
+    transition: font-size 800ms ease-in-out;
 
     &:hover{
       color: #676767;
-      animation: squish 200ms ease-in-out;
+      font-size: 1.15rem;
+      transition: font-size 300ms ease-in-out;
     }
   }
 

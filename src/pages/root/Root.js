@@ -79,7 +79,7 @@ export const Root = () => {
   }
 
 
-  const hnadleNavLinkScrolling = (e, targetSectionId) =>{
+  const handleNavLinkScrolling = (e, targetSectionId) =>{
     e.preventDefault();
     const targetSection = document.getElementById(targetSectionId);
     targetSection.scrollIntoView({behavior:"smooth"});
@@ -99,17 +99,17 @@ export const Root = () => {
         <nav >
           <ul>
             <li 
-              onClick={(e)=>hnadleNavLinkScrolling(e, 'whoami')}
+              onClick={(e)=>handleNavLinkScrolling(e, 'whoami')}
               className="nav-item" >
               <Link to="#"><IoMdPerson /><span className="mobile">WHOAMI</span></Link>
             </li>
             <li
-              onClick={(e)=>hnadleNavLinkScrolling(e, 'projects')} 
+              onClick={(e)=>handleNavLinkScrolling(e, 'projects')} 
               className="nav-item">
               <Link to="#"><AiFillProject /><span className="mobile" >PROJECTS</span></Link>
             </li>
             <li
-              onClick={(e)=>hnadleNavLinkScrolling(e, 'extra')} 
+              onClick={(e)=>handleNavLinkScrolling(e, 'extra')} 
               className="nav-item">
               <Link to="#"><RiInformationFill /><span className="mobile">EXTRAME</span></Link>
             </li>

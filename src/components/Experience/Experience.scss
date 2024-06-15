@@ -81,12 +81,16 @@
             text-align: center;
             position: relative;
             transition: all 500ms ease-in-out;
+            box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.1);
+
 
 
             &:hover{
               cursor: pointer;
               background: #ffffff;
               border-radius: 3rem;
+              box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.2);
+
             }
 
             > p:nth-of-type(1){
@@ -95,6 +99,11 @@
 
             > p:nth-of-type(2), span{
               font-size: var(--font-small);
+            }
+            
+            .experience-more{
+              text-decoration: underline;
+              
             }
           }
         
@@ -197,7 +206,7 @@
       .experience-right-bottom{
         border: 1px solid var(--border-color);
         border-radius: 18px;
-        padding: 1rem 2rem;
+        padding: 1rem;
         box-sizing: border-box;
         background: #fff;
         display: flex;

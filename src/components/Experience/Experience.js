@@ -34,7 +34,7 @@ export const Expereince = () =>{
         <ul>
           <li className="experience-left-total experience-left-each">
             <p>5.7 년<span>+</span></p>
-            <p>(총 업무 경험)</p>
+            <p>(<span style={{fontWeight : 800}}>비 개발자</span> : 총 업무 경험)</p>
           </li>
           <li>
             <div className="experience-left-flex" >
@@ -76,7 +76,7 @@ export const Expereince = () =>{
             >
               <p>970 시간</p>
               <p>(프론트 엔드 교육)</p>
-              <span>상세보기</span>
+              <span className="experience-more">상세보기</span>
 
               <div className={`front-end ${openFront ? "visible" : "" }`}>
                 <p><strong>프론트 엔드 교육 과정 </strong><span>(2023.09~2024.03)</span></p>
@@ -116,7 +116,7 @@ export const Expereince = () =>{
             >
               <p>680 시간</p>
               <p>(UIUX 모바일 교육)</p>
-              <span>상세보기</span>
+              <span className="experience-more">상세보기</span>
               <div className={`uiux ${openUIUX ? "visible" : "" }`} >
                 <p><strong>웹&모바일 UIUX 교육 과정 </strong><span>(2016.07~2016.11)</span></p>
                 <Cancle onClick={()=>setOpenUIUX(false)} />
@@ -146,16 +146,18 @@ export const Expereince = () =>{
         </div>
         <div className="experience-right-bottom" >
           <span>SQLD 자격증 보유</span>
-          <span>어학연수 유</span>
+          <span>어학연수</span>
+          <span>대학교국토대장정</span>
           <span>생활플라워디자인 대학생(우수상)</span>
         </div>
         
       </div>
       </div>
 
-            <p 
-              className="experience-left-linkedin"
-              onClick={()=>handleNewBlank()}> <LinkedIn /></p>
+        <p 
+          className="experience-left-linkedin"
+          onClick={()=>handleNewBlank()}> <LinkedIn />
+        </p>
     </div>
   )
 }

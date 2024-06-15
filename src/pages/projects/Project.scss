@@ -2,11 +2,12 @@
 /* projects area */
 
 .project{
+  padding : 1rem 0;
   margin: 0 1rem;
   
   .project-wrap{
     box-sizing: border-box;
-    padding:3.5rem 2rem 6rem;
+    padding:3.5rem 2rem 3rem;
     border-radius: 1rem;
     background: #000;
 
@@ -25,7 +26,7 @@
       justify-items: center;
       place-items: center;
       gap:2rem;
-      padding:2rem 2rem 6rem;
+      padding:2rem 2rem 3rem;
       border-radius: .2rem;
       box-sizing: border-box;
       width: 100%;
@@ -34,10 +35,18 @@
       margin-bottom: 50px;
 
       .project-p{
-        // display: flex;
-        // justify-content: center;
-        // align-items: center;
-        // gap: 1rem;
+        position: relative;
+
+        .project-attribution{
+          font-size: 12px;
+          position: absolute;
+          bottom: 5px;
+          left: 10px;
+          color: #000;
+          background-color: #eaeaea;
+          padding: .2rem .3rem;
+          border-radius: 4px;
+        }
 
         .project-p-img{
           display: block;
@@ -62,12 +71,13 @@
         .first{
           font-size: var(--font-large);
           font-weight: 600;
+          margin-bottom: 10px;
         }
         
         p:nth-of-type(2){
           font-size: 12px;
           margin-top: 4px;
-          margin-bottom: 40px;
+          margin-bottom: 20px;
         }
 
         p:nth-of-type(3){
@@ -85,18 +95,17 @@
           background: #fff;
           border: 1px solid var(--color-light);
           transition : border-radius 250ms ease-in-out;
+          box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.1);
+
 
           &:hover{
             border-radius: 1.2rem;
             background: var(--color-light);
+            box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.2);
+
 
           }
         }
-
-        // &:hover{
-          // background: var(--color-extreme);
-        //   color: ;
-        // }
 
         .project-keywords{
           display: flex;
@@ -124,22 +133,26 @@
       }
     
       .project-icon-wrap{
-        position: absolute;
-        bottom: 20px;
         display: flex;
         gap:1rem;
+        margin-top : 60px;
 
         > button{
+          width: 100%;
           padding:.8rem .8rem;
           border-radius: 10px;
           cursor: pointer;
-          background-color: #fff;
+          background-color: var(--color-main);
           border: 1px solid var(--color-main);
           transition: border-radius 250ms ease-in-out;
+          box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.1);
+
 
           &:hover{
             border-radius: 1.2rem;
             background: var(--color-light);
+            box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.2);
+
           }
         }
 
@@ -239,7 +252,7 @@
   .project-popup2
   {
     position: fixed;
-    top:50%;
+    top:49%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
     transition: transform .3s ease-in-out;
@@ -323,7 +336,7 @@
   .project-popup3
   {
     position: fixed;
-    top:70%;
+    top:72%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
     transition: transform .3s ease-in-out;

@@ -36,15 +36,40 @@ export const TechSkills = () =>{
       ],
     },
     {
-      title : 'Node',
-      img : "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg",
+      title : 'SACC',
+      img : "https://upload.wikimedia.org/wikipedia/commons/9/96/Sass_Logo_Color.svg",
       texts: [
-        "- express를 활용한 기초적인 통신(GET, POST) 가능"
+        "- 컴파일을 활용한 CSS 대신 SCSS 가능"
       ],
     }
   ]
 
 
+  const contents2 = [
+    {
+      title : 'Node',
+      img : "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg",
+      texts: [
+        "- express를 활용한 기초적인 통신(GET, POST) 가능"
+      ],
+    },
+    {
+      title : 'TypeScript',
+      img : "https://upload.wikimedia.org/wikipedia/commons/f/f5/Typescript.svg",
+      texts: [
+        "- 강의를 통해 기본 개념 숙지 및 학습중",
+        "- 변수에 타입 설정및 type alias, interface 사용 가능",
+      ],
+    },
+    {
+      title : 'Git',
+      img : "https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg",
+      texts: [
+        "- 사용 개넘에 대한 이해 숙지",
+        "- push를 기본으로 merge, rebase, squash 이해",
+      ],
+    }
+  ]
     // const [activeIndex, setActiveIndex] = useState(null);
 
   const toggleSection = (index) => {
@@ -54,34 +79,69 @@ export const TechSkills = () =>{
   return(
     <div className="tech-wrap" >
       <h2>TECH SKILLS</h2>
-      <ul>
-
-        { 
-        contents.map((skill, index)=>{
-          return(
-          <li 
-            key={index} 
-            className="tech-content" 
-          >
-            <img className={skill.title.toLowerCase()} src={skill.img} alt={skill.title} />
-            <div className="tech-overlay">
-            {
-                skill.texts.map((text)=>{
-                  return(
-                  <p  >{text}</p>
-                  )
-                })
-              }
-              </div>
-          </li>
-          )
-        })
-      }
-        
-      </ul>
       <div className="tech-tip">
-        <p>각각에 스킬을 클릭하시면 갼략한 정보를 볼실 수 있어요.</p>
+        <p>각각에 스킬을 클릭하시면 간략한 정보를 볼실 수 있어요.</p>
       </div>
+      <div>
+        <p className="tech-wrap-title">GOOD LEVEL</p>
+        <ul>
+
+          { 
+          contents.map((skill, index)=>{
+            return(
+            <li 
+              key={index} 
+              className="tech-content" 
+            >
+              <img className={skill.title.toLowerCase()} src={skill.img} alt={skill.title} />
+              <div className="tech-overlay">
+              {
+                  skill.texts.map((text)=>{
+                    return(
+                    <p  >{text}</p>
+                    )
+                  })
+                }
+                </div>
+            </li>
+            )
+          })
+          }
+
+        </ul>
+      </div>
+
+      <div>
+        <p className="tech-wrap-title">UNDERSTAND LEVEL</p>
+        <ul>
+
+          { 
+          contents2.map((skill, index)=>{
+            return(
+            <li 
+              key={index} 
+              className="tech-content" 
+            >
+              <img className={skill.title.toLowerCase()} src={skill.img} alt={skill.title} />
+              <div className="tech-overlay">
+              {
+                  skill.texts.map((text)=>{
+                    return(
+                    <p  >{text}</p>
+                    )
+                  })
+                }
+                </div>
+            </li>
+            )
+          })
+          }
+
+        </ul>
+      </div>
+      
+
+
     </div>
   )
 }

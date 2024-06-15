@@ -8,6 +8,23 @@
   border-top: 1px solid var(--color-light);
   }
 
+  .tech-wrap-title{
+    color:var(--color-strong);
+    margin-bottom: 20px;
+    position: relative;
+    &::after{
+      position: absolute;
+      background: var(--color-strong);
+      top: 50%;
+      content: "";
+      width: 50px;
+      height: 1px;
+    }
+  }
+  > div {
+    margin-bottom: 40px;
+
+  }
   ul{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -20,7 +37,7 @@
       align-items: center;
       box-sizing: border-box;
       width:180px;
-      height: 280px;
+      height: 250px;
       box-shadow: 0 0 10px 4px rgb(0, 0, 0, 0.1);
       border-radius: 1rem;
       position: relative;
@@ -81,9 +98,6 @@
         outline: teal;
       }
 
-
-    
-
       img{
         margin-bottom: 20px;
 
@@ -109,6 +123,18 @@
 
       .node{
         width:100px;
+      }
+
+      .typescript{
+        width: 100px
+      }
+
+      .sacc{
+        width: 100px;;
+      }
+
+      .git{
+        width: 110px;
       }
     }
   }

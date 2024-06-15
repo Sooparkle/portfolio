@@ -2,14 +2,14 @@ import { ReactComponent as LinkedIn } from "../../assets/Linkedin.svg";
 import { ReactComponent as Github } from "../../assets/github.svg";
 import pic1 from "../../assets/Osaka.jpeg";
 import pic2 from "../../assets/tea2.jpeg";
-import pic3 from "../../assets/exercise.jpg";
+import pic0 from "../../assets/computer.jpg";
 import { ImageSlider } from "../imageSlider/ImageSlider";
 import "./Who.scss";
 import { useState } from "react";
 import { FaCaretRight } from "react-icons/fa6";
 
 export const Who = () => {
-  const IMAGES = [pic1, pic2, pic3];
+  const IMAGES = [ pic0, pic1, pic2];
   const [isReadClicked, setReadIsclicked] = useState(false);
   const [isTeaClicked, setTeaIsclicked] = useState(false);
   const [isHealthClicked, setHealthIsclicked] = useState(false);
@@ -25,6 +25,27 @@ export const Who = () => {
           <p className="who-name">임수한</p>
           <p className="who-position">Front-end Developer</p>
           <div>
+          <div
+              onClick={() => {
+                setHealthIsclicked(!isHealthClicked);
+              }}
+              className="who-info-detail"
+            >
+              <ul>
+                <li>PROGRAMMER</li>
+                <li>
+                  <FaCaretRight
+                    className={`right-btn ${
+                      isHealthClicked ? "activated" : ""
+                    }`}
+                  />
+                </li>
+              </ul>
+              <p className={`${isHealthClicked ? "activated" : ""}`}>
+                프로그램에 있어서 <span>깊이 생각하고 스스로 고민하고 찾아보면서 끝임없이 배우려 합니다.</span>
+              </p>
+            </div>
+
             <div
               onClick={() => {
                 setReadIsclicked(!isReadClicked);
@@ -32,7 +53,7 @@ export const Who = () => {
               className="who-info-detail"
             >
               <ul>
-                <li>Reader</li>
+                <li>READER</li>
                 <li>
                   <FaCaretRight
                     className={`right-btn ${isReadClicked ? "activated" : ""}`}
@@ -42,9 +63,9 @@ export const Who = () => {
               <p className={`${isReadClicked ? "activated" : ""}`}>
                 세상의 다양한 지식에 대한 호기심이 많아{" "}
                 <span>
-                  저렴하고 검증된 자료를 바탕으로 작성된 책을 통해 지식을 습득을
+                  저렴하고 검증된 자료를 바탕으로 작성된 책을 통해 지식 습득을
                 </span>
-                좋아합니다(요즘은 뇌 과학 관련 서적에 관심이 갑니다).
+                {" "}좋아합니다
               </p>
             </div>
 
@@ -55,7 +76,7 @@ export const Who = () => {
               className="who-info-detail"
             >
               <ul>
-                <li>TEA Enjoyer</li>
+                <li>TEA</li>
                 <li>
                   <FaCaretRight
                     className={`right-btn ${isTeaClicked ? "activated" : ""}`}
@@ -64,50 +85,27 @@ export const Who = () => {
               </ul>
 
               <p className={`${isTeaClicked ? "activated" : ""}`}>
-                커피를 마시지 않아 <span>대신 차(TEA)를 마십니다.</span>{" "}
-                요즘은 보이생차를 마시고 있으며 여름이 다가오니 우롱차가 마시고
-                싶어 집니다.
+                차(TEA)를 좋아합니다. 커피를 마시지 않아 <span>대신 보이차, 홍차, 허브차 등을 마십니다.</span>{" "}
               </p>
             </div>
 
-            <div
-              onClick={() => {
-                setHealthIsclicked(!isHealthClicked);
-              }}
-              className="who-info-detail"
-            >
-              <ul>
-                <li>Health Manager</li>
-                <li>
-                  <FaCaretRight
-                    className={`right-btn ${
-                      isHealthClicked ? "activated" : ""
-                    }`}
-                  />
-                </li>
-              </ul>
-              <p className={`${isHealthClicked ? "activated" : ""}`}>
-                건강 관리를 위해 2년 전부터{" "}
-                <span>꾸준히 주 2회 정도 헬스장</span>에 갑니다. 특히 허리와
-                엉덩히 근육과 스트레칭에 관심이 많습니다.
-              </p>
-            </div>
+
           </div>
 
-          <div className="who-icons-wrap">
-            <LinkedIn
+          {/* <div className="who-icons-wrap"> */}
+            {/* <LinkedIn
               onClick={() =>
                 window.open("https://www.linkedin.com/in/sooohan/", "_blank")
               }
-            />
-            <Github
+            /> */}
+            {/* <Github
               onClick={() => {
                 window.open("https://github.com/Sooparkle", "_blacnk");
               }}
-            />
-          </div>
+            /> */}
+          {/* </div> */}
         </div>
       </div>
-    </div>,
+    </div>
   ];
 };

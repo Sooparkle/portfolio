@@ -1,4 +1,8 @@
 import React, { useEffect } from "react";
+import { FaLinkedin, FaGithubSquare } from "react-icons/fa";
+import { FaFilePen } from "react-icons/fa6";
+
+
 import "./Contact.scss";
 
 export const Contact = () => {
@@ -18,18 +22,18 @@ export const Contact = () => {
                 window.open("https://github.com/Sooparkle/", "_blank")
               }
             >
-              Github
+              <FaGithubSquare /> Github
             </span>
           </li>
           <li>
-            <sapn
+            <span
               className="contact-linkedin"
               onClick={() =>
                 window.open("https://www.linkedin.com/in/sooohan/", "_blank")
               }
             >
-              Linkedin
-            </sapn>
+              <FaLinkedin /> LinkedIn
+            </span>
           </li>
           <li>
             <span
@@ -38,7 +42,7 @@ export const Contact = () => {
                 window.open("https://life-explorer.tistory.com/", "_blank")
               }
             >
-              Blog
+              <FaFilePen /> Personal Blog
             </span>
           </li>
         </ul>

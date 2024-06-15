@@ -14,6 +14,7 @@ import accommodationImage from "../../assets/JejuAccomm.png";
 import order from "../../assets/order.png";
 import accomStacks from "../../assets/accomstacks.png";
 import accomLibraries from "../../assets/accomLibraries.png";
+import timerTodo from "../../assets/timer_todo.png";
 import "./Project.scss";
 
 export const Projects = () => {
@@ -41,8 +42,6 @@ export const Projects = () => {
       keywords: [
         "MPA",
         "Vanilla JS",
-        "HTML5",
-        "CSS",
         "PPT 및 기획",
         "담당메뉴:STATS & TICKET",
       ],
@@ -61,10 +60,9 @@ export const Projects = () => {
       github: "https://github.com/Sooparkle/Library/tree/renewerlibrary",
       gitServer: "https://github.com/Sooparkle/pj3_server/tree/main",
       keywords: [
-        "SPA",
+        "TypeScript",
         "react-router-dom",
-        "react-redux",
-        `react-reduxjs/toolkit`,
+        "react-query",
         "react-datepicker",
         "공공데이터 API",
       ],
@@ -82,7 +80,6 @@ export const Projects = () => {
       github: "https://github.com/Sooparkle/project3/tree/home",
       gitServer: "https://github.com/Sooparkle/pj3_server/tree/main",
       keywords: [
-        "SPA",
         "react-router-dom",
         "react-redux",
         `react-reduxjs/\ntoolkit`,
@@ -90,6 +87,23 @@ export const Projects = () => {
         `Supabse(PostgreSQL)`,
       ],
     },
+    // {
+    //   title: "Project 4",
+    //   isAble: true,
+    //   type : "개인",
+    //   name: "Timer로 Todo 관리",
+    //   description:
+    //     "TypeScript를 이용하여 Browser LocalStorage에 데이터 관리",
+    //   contribution: "100%",
+    //   imageUrl: [`${timerTodo}`],
+    //   url: `https://timer-todo.pages.dev/`,
+    //   github: "https://github.com/Sooparkle/timer_todo/",
+    //   keywords: [
+    //     "TypeScript",
+    //     "LocalStorage",
+    //     "react-icons",
+    //   ],
+    // }
   ];
 
   const handleOpenDemo = (project) => {
@@ -117,7 +131,7 @@ export const Projects = () => {
       window.open(project.gitServer, "_blank", "noopener, noreferrer");
       return;
     } else {
-      window.alert(`현재 유지보스 중입니다.\n빠른 시일내로 처리하겠습니다.`);
+      window.alert(`서버가 없는 프로젝트 입니다.`);
     }
   };
 
@@ -138,6 +152,9 @@ const togglePopup =(index) => {
     setOpentProject3(!openProject3)
     return
   }
+  else{
+    window.alert(`간단한 프로젝트입니다.\n LiveDemo를 통해 직접 체험해 보세요!`)
+  }
 }
 
 
@@ -154,10 +171,10 @@ const togglePopup =(index) => {
               <div key={index} className="project-each">
                 <div className="project-p">
                   <img className="project-p-img" src={item.imageUrl[0]} alt="" />
+                  <p className="project-attribution">{item.contribution} <span>({item.type})</span></p>
                 </div>
                 <div className="project-info">
                   <p className="first"> {item.name}</p>
-                  <p>기여도 : {item.contribution} <span>({item.type})</span></p>
 
                   <p>{item.description}</p>
                   <ul className="project-keywords">
@@ -165,25 +182,27 @@ const togglePopup =(index) => {
                       <li key={library}> {library}</li>
                     ))}
                   </ul>
-                  <button 
+                  {/* <button 
                     onClick={()=>togglePopup(index)}
                   >
                     과정 상세보기
-                  </button>
-                </div>
+                  </button> */}
+
                 <div className="project-icon-wrap">
-                  <button onClick={() => handleOpenGithub(item)}>
+                  {/* <button onClick={() => handleOpenGithub(item)}>
                     Github
-                  </button>
+                  </button> */}
                   <button 
                     className="project-live"
                     onClick={() => handleOpenDemo(item)}>
                     Live Demo
                   </button>
-                  <button onClick={() => handleOpenServer(item)}>
+                  {/* <button onClick={() => handleOpenServer(item)}>
                     Github Sever
-                  </button>
-                  </div>
+                  </button> */}
+                </div>
+
+                </div>
               </div>
             );
           })}

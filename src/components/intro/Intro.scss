@@ -1,6 +1,6 @@
 /* intro area */
 .intro-wrap{
-  $typingNumber:14;
+  $typingNumber:8;
   $typingSpeed : 6s;
 
   
@@ -41,7 +41,7 @@
       position: relative;
 
       &::before{
-        content: "CYBER MAKER.";
+        content: "SOLVER.";
         font-weight: 600;
         animation: word 5s infinite;
       }
@@ -56,7 +56,7 @@
         right: -12px;
         animation: 
           cursor 750ms infinite, 
-          typing 5s steps($typingNumber) infinite;
+          typing 2.7s steps($typingNumber) infinite;
         animation-delay: .8s;
       }
     }
