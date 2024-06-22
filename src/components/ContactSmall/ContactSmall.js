@@ -3,15 +3,13 @@ import { FaLinkedin, FaGithubSquare } from "react-icons/fa";
 import { FaFilePen } from "react-icons/fa6";
 
 
-import "./Contact.scss";
+import "./ContactSmall.scss";
 
-export const Contact = () => {
+export const ContactSmall = () => {
   
 
   return (
-    <>
-      <div className="contact-wrap">
-        <h2>EXTRA ABOUT ME</h2>
+      <section className="contactSmall-wrap">
         <ul>
           <li>
             <span
@@ -20,7 +18,7 @@ export const Contact = () => {
                 window.open("https://github.com/Sooparkle/", "_blank")
               }
             >
-              <FaGithubSquare /> Github
+              <FaGithubSquare />
             </span>
           </li>
           <li>
@@ -30,7 +28,7 @@ export const Contact = () => {
                 window.open("https://www.linkedin.com/in/sooohan/", "_blank")
               }
             >
-              <FaLinkedin /> LinkedIn
+              <FaLinkedin />
             </span>
           </li>
           <li>
@@ -40,11 +38,11 @@ export const Contact = () => {
                 window.open("https://life-explorer.tistory.com/", "_blank")
               }
             >
-              <FaFilePen /> Personal Blog
+              <FaFilePen /> 
             </span>
           </li>
         </ul>
-      </div>
-    </>
+      </section>
+
   );
 };

@@ -32,7 +32,7 @@ export const ImageSlider = ({imageUrls}) => {
       {
         imageUrls.map((url,index) => (
           <img 
-            key={url} 
+            key={index} 
             src={url} 
             style={{translate : `${-100 * imageIndex}%`}}
             className={`img-slider-img`}/>
@@ -58,6 +58,7 @@ export const ImageSlider = ({imageUrls}) => {
         {
           imageUrls.map((a, index)=>(
             <button
+            key={index}
               className="slide-imgs-dot"
               onClick={() => setImageIndex(index)}
             >{index === imageIndex ? <GoDotFill /> : <GoDot /> }</button>

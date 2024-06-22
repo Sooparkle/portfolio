@@ -2,7 +2,7 @@
 /* projects area */
 
 .project{
-  padding : 1rem 0;
+  padding : 1rem 0 6rem 0;
   margin: 0 1rem;
   
   .project-wrap{
@@ -135,7 +135,7 @@
       .project-icon-wrap{
         display: flex;
         gap:1rem;
-        margin-top : 60px;
+        margin-top : 30px;
 
         > button{
           width: 100%;
@@ -146,6 +146,8 @@
           border: 1px solid var(--color-main);
           transition: border-radius 250ms ease-in-out;
           box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.1);
+
+          flex:7;
 
 
           &:hover{
@@ -160,6 +162,58 @@
           background: var(--color-light);
 
         }
+      
+      .project-popupdot{
+        position: relative;
+        background-color: #fff;
+        border: 1px solid #eaeaea;
+        border-radius: 10px;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+      }
+  
+
+      .project-popupdot-inner{
+        position: absolute;
+        max-width: 200px;
+        max-height: fit-content;
+        border-radius: 4px;
+
+        background-color: #fff;
+        box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.1);
+        top: -40px;
+        left: -40px;
+        
+        ul{
+          list-style: none;
+
+        }
+
+        li {
+          width: 80px;
+          width: 100%;
+          padding: .2rem 1.2rem;
+          &:not(:last-child) {
+            border-bottom: 1px solid #ccc;
+          }
+      
+          &:hover{
+            background-color: #ccc;
+          }
+
+          a {
+            text-decoration: none; /* Remove default underline from links */
+            display: block;
+            padding: 10px 0;
+            color: inherit; /* Inherit color from parent */
+          }
+        }
+
+      }
       }
 
     }
@@ -433,12 +487,12 @@
     font-size: var(--font-exttrem);
   }
 
-  svg {
-    width: 30px;
-    padding:.2rem;
-    cursor: pointer;
-    vertical-align: bottom;
-  }
+  // svg {
+  //   width: 30px;
+  //   padding:.2rem;
+  //   cursor: pointer;
+  //   vertical-align: bottom;
+  // }
 
 }
 }

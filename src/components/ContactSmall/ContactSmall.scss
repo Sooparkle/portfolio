@@ -1,6 +1,7 @@
 /* contact wrap */
-.contactSmall-wrap{
+.contact-wrap{
   box-sizing: border-box;
+  padding: 9rem 3rem;
   width: 100%;
 
 h2{
@@ -8,22 +9,17 @@ h2{
     border-top: 1px solid var(--color-light);
 }
 
-ul{
-  display: flex;
-  justify-content: center;
-  gap : 1rem;
-    li{
+  li{
 
-      & span {
-        display: flex;
-        align-items: center;
-        gap :10px;
-      }
-      & svg{
-        font-size: 1.5rem;
-      }
+    margin: 2rem 0;
+
+    & span {
+      display: flex;
+      align-items: center;
+      gap :10px;
     }
   }
+  
   .contact-github{
     cursor: pointer;
     font-size: 1rem;
@@ -40,6 +36,7 @@ ul{
 
   .contact-linkedin{
     cursor: pointer;
+    font-size: 1rem;
     transition: font-size 800ms ease-in-out;
 
 
@@ -52,10 +49,12 @@ ul{
 
   .contact-blog{
     cursor: pointer;
+    font-size: 1rem;
     transition: font-size 800ms ease-in-out;
 
     &:hover{
       color: #676767;
+      font-size: 1.15rem;
       transition: font-size 300ms ease-in-out;
     }
   }

@@ -7,6 +7,8 @@ import { ImageSlider } from "../imageSlider/ImageSlider";
 import "./Who.scss";
 import { useState } from "react";
 import { FaCaretRight } from "react-icons/fa6";
+import { ContactSmall } from "../ContactSmall/ContactSmall";
+
 
 export const Who = () => {
   const IMAGES = [ pic0, pic1, pic2];
@@ -24,8 +26,10 @@ export const Who = () => {
         <div className="who-info-wrap">
           <p className="who-name">임수한</p>
           <p className="who-position">Front-end Developer</p>
+
           <div>
-          <div
+
+            <div
               onClick={() => {
                 setHealthIsclicked(!isHealthClicked);
               }}
@@ -91,19 +95,8 @@ export const Who = () => {
 
 
           </div>
+            <ContactSmall />
 
-          {/* <div className="who-icons-wrap"> */}
-            {/* <LinkedIn
-              onClick={() =>
-                window.open("https://www.linkedin.com/in/sooohan/", "_blank")
-              }
-            /> */}
-            {/* <Github
-              onClick={() => {
-                window.open("https://github.com/Sooparkle", "_blacnk");
-              }}
-            /> */}
-          {/* </div> */}
         </div>
       </div>
     </div>

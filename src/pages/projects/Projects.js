@@ -14,17 +14,15 @@ import accommodationImage from "../../assets/JejuAccomm.png";
 import order from "../../assets/order.png";
 import accomStacks from "../../assets/accomstacks.png";
 import accomLibraries from "../../assets/accomLibraries.png";
-import timerTodo from "../../assets/timer_todo.png";
 import "./Project.scss";
+import { PopupList } from "./Popup";
+import { HiOutlineDotsVertical } from "react-icons/hi";
 
 export const Projects = () => {
   const [openProject1, setOpentProject1] = useState(false);
   const [openProject2, setOpentProject2] = useState(false);
   const [openProject3, setOpentProject3] = useState(false);
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  const [ popupdot, togglePopupdot ] = useState(null);
 
 
   const projects = [
@@ -45,6 +43,10 @@ export const Projects = () => {
         "PPT 및 기획",
         "담당메뉴:STATS & TICKET",
       ],
+      popup:[
+        {git :  "https://github.com/theshack8/kgc_team_project"},
+      
+      ]
     },
     {
       title: "Project 2",
@@ -66,6 +68,10 @@ export const Projects = () => {
         "react-datepicker",
         "공공데이터 API",
       ],
+      popup:[
+        {git : "https://github.com/Sooparkle/Library/tree/renewerlibrary"},
+        {blog : "https://life-explorer.tistory.com/category/Projects"},
+      ]
     },
     {
       title: "Project 3",
@@ -86,6 +92,10 @@ export const Projects = () => {
         "react-calendar",
         `Supabse(PostgreSQL)`,
       ],
+      popup:[
+        {git : "https://github.com/Sooparkle/project3/tree/home"},
+        {blog : "https://life-explorer.tistory.com/category/Projects"},
+      ]
     },
     // {
     //   title: "Project 4",
@@ -159,6 +169,23 @@ const togglePopup =(index) => {
 
 
 
+// popupdot cancel button
+useEffect(()=>{
+  const close = () => togglePopupdot(null)
+  if(popupdot >-1){
+    window.addEventListener('click', close)
+  }
+  return () =>{
+    window.removeEventListener('click', close)
+  }
+},[popupdot])
+
+// popupdot it check
+const handleToggle = (id,e) =>{
+  e.stopPropagation();
+  togglePopupdot(prev => (prev === id ? null : id))
+}
+
   return (
     <div className="project">
       <div className="project-wrap">
@@ -182,6 +209,7 @@ const togglePopup =(index) => {
                       <li key={library}> {library}</li>
                     ))}
                   </ul>
+
                   {/* <button 
                     onClick={()=>togglePopup(index)}
                   >
@@ -192,14 +220,26 @@ const togglePopup =(index) => {
                   {/* <button onClick={() => handleOpenGithub(item)}>
                     Github
                   </button> */}
+
                   <button 
                     className="project-live"
                     onClick={() => handleOpenDemo(item)}>
                     Live Demo
                   </button>
-                  {/* <button onClick={() => handleOpenServer(item)}>
-                    Github Sever
-                  </button> */}
+
+                  <button
+                    className="project-popupdot"
+                    onClick={(e) => handleToggle(index, e)}
+                  >
+                    <HiOutlineDotsVertical />
+                    {popupdot === index && <PopupList 
+                      item={item} 
+                      // closed={()=>togglePopupdot(false)} 
+                      handleToggle={handleToggle}
+                      // current={popupdot===index}
+                    />}
+                  </button>
+
                 </div>
 
                 </div>

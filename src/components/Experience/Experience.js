@@ -154,10 +154,7 @@ export const Expereince = () =>{
       </div>
       </div>
 
-        <p 
-          className="experience-left-linkedin"
-          onClick={()=>handleNewBlank()}> <LinkedIn />
-        </p>
+
     </div>
   )
 }

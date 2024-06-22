@@ -15,7 +15,7 @@ export const TechSkills = () =>{
       img : "https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg",
       texts: [
         "- 웹과 모바일에 대한 기본적인 작동 원리 이해 및 작성 가능",
-        "- YOUTUBE Kovin Powell를 보면서 CSS 트렌스 학습",
+        "- YOUTUBE Kovin Powell를 보면서 CSS 트랜스 학습",
       ],
     },
     {
@@ -50,15 +50,16 @@ export const TechSkills = () =>{
       title : 'Node',
       img : "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg",
       texts: [
-        "- express를 활용한 기초적인 통신(GET, POST) 가능"
+        "- CORS 이슈 해결을 위해 Server Node 활용",
+        "- Fetch,axios 통신(GET, POST) 가능",
       ],
     },
     {
       title : 'TypeScript',
       img : "https://upload.wikimedia.org/wikipedia/commons/f/f5/Typescript.svg",
       texts: [
-        "- 강의를 통해 기본 개념 숙지 및 학습중",
-        "- 변수에 타입 설정및 type alias, interface 사용 가능",
+        "- 강의를 통해 기본 개념 숙지 및 학습",
+        "- 변수에 타입 설정 및 type alias, interface 사용 가능",
       ],
     },
     {
@@ -70,7 +71,6 @@ export const TechSkills = () =>{
       ],
     }
   ]
-    // const [activeIndex, setActiveIndex] = useState(null);
 
   const toggleSection = (index) => {
     // setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
@@ -96,9 +96,9 @@ export const TechSkills = () =>{
               <img className={skill.title.toLowerCase()} src={skill.img} alt={skill.title} />
               <div className="tech-overlay">
               {
-                  skill.texts.map((text)=>{
+                  skill.texts.map((text, index)=>{
                     return(
-                    <p  >{text}</p>
+                    <p key={index} >{text}</p>
                     )
                   })
                 }
@@ -125,9 +125,9 @@ export const TechSkills = () =>{
               <img className={skill.title.toLowerCase()} src={skill.img} alt={skill.title} />
               <div className="tech-overlay">
               {
-                  skill.texts.map((text)=>{
+                  skill.texts.map((text, index)=>{
                     return(
-                    <p  >{text}</p>
+                    <p key={index} >{text}</p>
                     )
                   })
                 }
