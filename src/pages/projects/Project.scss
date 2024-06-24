@@ -71,7 +71,9 @@
         .first{
           font-size: var(--font-large);
           font-weight: 600;
+          font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
           margin-bottom: 10px;
+          text-align: center;
         }
         
         p:nth-of-type(2){
@@ -107,6 +109,21 @@
           }
         }
 
+        .description{
+          margin-bottom: 10px;
+          font-weight: 600;
+        }
+
+        .contents{
+          font-size: 12px;
+          padding: .5rem 0;
+          border-top: 1px solid #ccc;
+          border-bottom: 1px solid #ccc;
+
+          & dd{
+            margin-left: 15px;
+          }
+        }
         .project-keywords{
           display: flex;
           flex-wrap: wrap;

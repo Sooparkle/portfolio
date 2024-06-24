@@ -15,7 +15,7 @@ export const TechSkills = () =>{
       img : "https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg",
       texts: [
         "- 웹과 모바일에 대한 기본적인 작동 원리 이해 및 작성 가능",
-        "- YOUTUBE Kovin Powell를 보면서 CSS 트랜스 학습",
+        "- YOUTUBE 'Kovin Powell'를 보면서 CSS 트랜드 학습",
       ],
     },
     {
@@ -23,7 +23,7 @@ export const TechSkills = () =>{
       img : "https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg",
       texts: [
         "- ES6 이후 기본 문법 구사 가능",
-        "- Vanilla JavaScript의 작동 원리 이해 추구",
+        "- Vanilla JavaScript의 기본 작동 원리 이해",
       ],
     },
     {
@@ -31,7 +31,7 @@ export const TechSkills = () =>{
       img : "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
       texts: [
         "- React 기본 Hooks 이해 및 작성 가능",
-        "- 비동기 처리에 대한 기본적 이해와 Fetch 통신 가능",
+        "- 비동기 처리에 대한 기본적 이해와 Fetch 통신과 에러 핸드링 가능",
         "- Redux와 Reduxjs/ toolkit 활용한 상태 관리 가능",
       ],
     },
@@ -69,8 +69,17 @@ export const TechSkills = () =>{
         "- 사용 개넘에 대한 이해 숙지",
         "- push를 기본으로 merge, rebase, squash 이해",
       ],
+    },
+    {
+      title : 'CloudeFlare',
+      img : "https://upload.wikimedia.org/wikipedia/commons/4/4b/Cloudflare_Logo.svg",
+      texts: [
+        "- GitHub 연결이 아닌 run build로 배포 경험 보유",
+      ],
     }
   ]
+
+
 
   const toggleSection = (index) => {
     // setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
@@ -139,8 +148,6 @@ export const TechSkills = () =>{
 
         </ul>
       </div>
-      
-
 
     </div>
   )
