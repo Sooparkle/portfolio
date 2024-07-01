@@ -64,10 +64,6 @@ function App() {
         <Who />
       </section>
 
-      <section id="exper" ref={sections.exper} className="tag">
-        <Expereince />
-      </section>
-
       <section id="tech" ref={sections.tech} className="tag">
         <TechSkills />
       </section>
@@ -79,6 +75,10 @@ function App() {
       {/* <section id="extra" ref={sections.extra} className="tag">
         <Contact />
       </section> */}
+
+      <section id="exper" ref={sections.exper} className="tag">
+        <Expereince />
+      </section>
 
       <section >
         <Footer />

@@ -108,37 +108,11 @@ export const Root = () => {
               className="nav-item">
               <Link to="#"><AiFillProject /><span className="mobile" >PROJECTS</span></Link>
             </li>
-            <li
-              onClick={(e)=>handleNavLinkScrolling(e, 'extra')} 
-              className="nav-item">
-              <Link to="#"><RiInformationFill /><span className="mobile">EXTRAME</span></Link>
-            </li>
           </ul>
 
         </nav>
       </div>
 
-      {/* <div className={`bamhurger-wrap ${isMobileSizeSmall ? 'bamburger-visiable' : 'bamburger-wrap'}`}>
-        <ul>
-        <li>
-            <NavLink to={PAGE_LIST.WHO} >WHOAMI</NavLink>
-          </li>
-          <li>
-            <NavLink to={PAGE_LIST.PROJECTS}>PROJECTS</NavLink>
-          </li>
-          <li>
-            <NavLink to={PAGE_LIST.CONTACT}>CONTACT</NavLink>
-          </li>
-          <li>
-              <Hamburger
-                onClick={()=>handleRightSideBar()}
-                className={`${isMobileSizeSmall ? 'bamburger-btn' : 'bamburger-btn-unvisiable'}`}
-                  />
-
-            </li>
-        </ul>
-      </div>
-   */}
       <div  className="detail">
       <Outlet />
 

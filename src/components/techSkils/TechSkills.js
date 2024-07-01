@@ -30,9 +30,8 @@ export const TechSkills = () =>{
       title : 'React',
       img : "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
       texts: [
-        "- React 기본 Hooks 이해 및 작성 가능",
+        "- React 기본 Hooks, 이해 및 작성 가능",
         "- 비동기 처리에 대한 기본적 이해와 Fetch 통신과 에러 핸드링 가능",
-        "- Redux와 Reduxjs/ toolkit 활용한 상태 관리 가능",
       ],
     },
     {
@@ -51,7 +50,7 @@ export const TechSkills = () =>{
       img : "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg",
       texts: [
         "- CORS 이슈 해결을 위해 Server Node 활용",
-        "- Fetch,axios 통신(GET, POST) 가능",
+        "- Fetch,axios 통한 통신(GET, POST) 구축 가능",
       ],
     },
     {
@@ -66,7 +65,7 @@ export const TechSkills = () =>{
       title : 'Git',
       img : "https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg",
       texts: [
-        "- 사용 개넘에 대한 이해 숙지",
+        "- 사용 개념에 대한 이해 숙지",
         "- push를 기본으로 merge, rebase, squash 이해",
       ],
     },

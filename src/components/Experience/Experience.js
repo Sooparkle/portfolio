@@ -74,8 +74,7 @@ export const Expereince = () =>{
           <ul>
             <li onClick={(e)=>handleFront(e)}
             >
-              <p>970 시간</p>
-              <p>(프론트 엔드 교육)</p>
+              <p>프론트 엔드 교육</p>
               <span className="experience-more">상세보기</span>
 
               <div className={`front-end ${openFront ? "visible" : "" }`}>
@@ -114,8 +113,7 @@ export const Expereince = () =>{
             <li 
                 onClick={handleUIUX}
             >
-              <p>680 시간</p>
-              <p>(UIUX 모바일 교육)</p>
+              <p>UIUX 모바일 교육</p>
               <span className="experience-more">상세보기</span>
               <div className={`uiux ${openUIUX ? "visible" : "" }`} >
                 <p><strong>웹&모바일 UIUX 교육 과정 </strong><span>(2016.07~2016.11)</span></p>

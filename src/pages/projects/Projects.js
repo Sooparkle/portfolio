@@ -12,28 +12,40 @@ export const Projects = () => {
 
   const projects = [
     {
-      title: "Project 1",
+      title: "Project 3",
       isAble: true,
-      type : "팀",
-      name: "배구, 정관장 레드스파크스 리뉴얼",
+      type : "개인",
+      name: "숙박 예약 사이트, '좀쉼쉼'",
       description:
-        "배구, 정관장레드스파크 홈페이지를 클론(clone) 코딩",
-      contribution: "40%",
-      imageUrl: [`${redSparks}`],
-      url: `http://sooparkle.dothome.co.kr/`,
-      github: "https://github.com/theshack8/kgc_team_project",
+        "DB 설계 및 DB User Table 활용, 로그인 인증 가능 숙박 사이트",
+      contribution: "100%",
+      imageUrl: [`${accommodationImage}`],
+      url: `https://project3-accom.pages.dev/`,
+      github: "https://github.com/Sooparkle/project3/tree/home",
+      gitServer: "https://github.com/Sooparkle/pj3_server/tree/main",
       contents:[
-        "교육과정 프로젝트로, Javascript를 학습하기 위한 '팀' 프로젝트",
-        "팀장 역할 수행, 페르소나와 포지셔닝 맵 등을 활용하여 UIUX 리뉴얼"
+        "교육과정 프로젝트로, 'Client - Server - DB' 통신",
+        "직접 만든 Supabase DB로 검색, 예약 그리고 예약 확인까지 가능",
+        "STAR",
+      ],
+      star : 
+      [
+        {Situation : "브라우저 CORS 정책에 의해 Client에서 Server로 데이터 요청 불가"},
+        {Task : "Server를 직접 설계"},
+        {Action : "1) Node 설치 2) CORS 해결 Library 설치"},
+        {Result : "Client에서 Server 통신 가능(SOP)"},
       ],
       keywords: [
-        "MPA",
-        "Vanilla JS",
-        "PPT 및 기획",
-        "담당메뉴:STATS & TICKET",
+        "react-router-dom",
+        "react-redux",
+        `react-reduxjs/\ntoolkit`,
+        "react-calendar",
+        "Node.js",
+        `Supabse(PostgreSQL)`,
       ],
       popup:[
-        {git :  "https://github.com/theshack8/kgc_team_project"},
+        {git : "https://github.com/Sooparkle/project3/tree/home"},
+        {blog : "https://life-explorer.tistory.com/category/Projects"},
       ]
     },
     {
@@ -51,7 +63,15 @@ export const Projects = () => {
       gitServer: "https://github.com/Sooparkle/pj3_server/tree/main",
       contents:[
         "교육과정 프로젝트로, '문해력'이라는 사회적 이슈 + '도서' 활용 해결 제안",
-        "서울시 특정 지역구, 특정 기간 동안 가장 관심있는 도서 검색 가능"
+        "서울시 특정 지역구, 특정 기간 동안 가장 관심있는 도서 검색 가능",
+        "STAR",
+      ],
+      star : 
+      [
+        {Situation : "상세 페이지 조회 이후 목록 데이터 사라짐"},
+        {Task : "목록 조회 페이지 데이터 유지"},
+        {Action : "Tan Stack Query Library 사용(캐쉬 저장 방식)"},
+        {Result : "데이터 그대로 존재 + 번외) 검색 결과 내 검색 속도 향상"},
       ],
       keywords: [
         "TypeScript",
@@ -66,31 +86,36 @@ export const Projects = () => {
       ]
     },
     {
-      title: "Project 3",
+      title: "Project 1",
       isAble: true,
-      type : "개인",
-      name: "숙박 예약 사이트, '좀쉼쉼'",
+      type : "팀",
+      name: "배구, 정관장 레드스파크스 리뉴얼",
       description:
-        "DB 설계 및 DB User Table 활용, 로그인 인증 가능 숙박 사이트",
-      contribution: "100%",
-      imageUrl: [`${accommodationImage}`],
-      url: `https://project3-accom.pages.dev/`,
-      github: "https://github.com/Sooparkle/project3/tree/home",
-      gitServer: "https://github.com/Sooparkle/pj3_server/tree/main",
+        "배구, 정관장레드스파크 홈페이지를 클론(clone) 코딩",
+      contribution: "40%",
+      imageUrl: [`${redSparks}`],
+      url: `http://sooparkle.dothome.co.kr/`,
+      github: "https://github.com/theshack8/kgc_team_project",
       contents:[
-        "교육과정 프로젝트로, 'Client - Server - DB' 틍신",
-        "직접 만든 Supabase DB로 검색, 예약 그리고 예약 확인까지 가능"
+        "교육과정 프로젝트로, Javascript를 학습하기 위한 '팀' 프로젝트",
+        "팀장 역할 수행, 페르소나와 포지셔닝 맵 등을 활용하여 UIUX 리뉴얼",
+        "STAR",
+      ],
+      star : 
+      [
+        {Situation : "UX 개선 방향성 미정"},
+        {Task : "주요 고객층 파악"},
+        {Action : "1) SWOT 분석 2) 경쟁사 분석 3) 페르소나 분석"},
+        {Result : "1) 배구협회 공홈이라는 특성상 티켓팅은 무조건 홈페이지에서 진행 따라서 HOME/AWAY 표기 명확히 2) 메가(인도네시아 ), 부키리치(세르비아) 선수로 외국인 유입 및 현 국내 선수들 SNS 홍보 + 인도네시아 브랜드 콜라보"},
       ],
       keywords: [
-        "react-router-dom",
-        "react-redux",
-        `react-reduxjs/\ntoolkit`,
-        "react-calendar",
-        `Supabse(PostgreSQL)`,
+        "MPA",
+        "Vanilla JS",
+        "PPT 및 기획",
+        "담당메뉴:STATS & TICKET",
       ],
       popup:[
-        {git : "https://github.com/Sooparkle/project3/tree/home"},
-        {blog : "https://life-explorer.tistory.com/category/Projects"},
+        {git :  "https://github.com/theshack8/kgc_team_project"},
       ]
     },
     // {
@@ -175,6 +200,13 @@ const handleToggle = (id,e) =>{
                       item.contents.map( (i, index )=> (
                         
                         <dd key={index}>{index+1}. {i}</dd>
+                      ))
+                    }
+                    {
+                      item.star.map((i, index) => (
+                        Object.entries(i).map(([key, value]) => (
+                          <dd key={index}><strong>{key}</strong> : {value}</dd>
+                        ))
                       ))
                     }
                   </dl>
