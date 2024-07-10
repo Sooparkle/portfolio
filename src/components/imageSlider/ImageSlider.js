@@ -58,7 +58,7 @@ export const ImageSlider = ({imageUrls}) => {
         {
           imageUrls.map((a, index)=>(
             <button
-            key={index}
+              key={index}
               className="slide-imgs-dot"
               onClick={() => setImageIndex(index)}
             >{index === imageIndex ? <GoDotFill /> : <GoDot /> }</button>

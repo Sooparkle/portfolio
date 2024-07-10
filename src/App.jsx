@@ -5,7 +5,6 @@ import { Intro } from "./components/intro/Intro";
 import { Who } from "./components/who/Who";
 import { Projects } from "./pages/projects/Projects";
 import { TechSkills } from "./components/techSkils/TechSkills";
-import { Contact } from "./components/contact/Contact";
 import { Expereince } from "./components/Experience/Experience";
 import './app.scss';
 
@@ -40,7 +39,7 @@ function App() {
           }
 
         }),
-      { threshold: 0.2 } // Adjust threshold as needed
+      { threshold: 0.2 }
     );
 
     Object.values(sections).forEach((ref) => {
@@ -57,7 +56,6 @@ function App() {
     <>
       <section id="intro" ref={sections.intro} className="tag">
         <Intro />
-        {/* <Slideword /> */}
       </section>
 
       <section id="whoami" ref={sections.whoami} className="who-tag">
@@ -71,10 +69,6 @@ function App() {
       <section id="projects" ref={sections.projects} className="tag">
         <Projects />
       </section>
-
-      {/* <section id="extra" ref={sections.extra} className="tag">
-        <Contact />
-      </section> */}
 
       <section id="exper" ref={sections.exper} className="tag">
         <Expereince />

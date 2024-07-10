@@ -80,6 +80,7 @@ export const Projects = () => {
         "ChartJS",
         "react-datepicker",
         "공공데이터 API",
+        "Zustand",
       ],
       popup:[
         {git : "https://github.com/Sooparkle/Library/tree/renewerlibrary"},
@@ -214,8 +215,8 @@ const handleToggle = (id,e) =>{
 
 
                   <ul className="project-keywords">
-                    {item.keywords.map((library) => (
-                      <li key={library}> {library}</li>
+                    {item.keywords.map((library,index) => (
+                      <li key={index}> {library}</li>
                     ))}
                   </ul>
 

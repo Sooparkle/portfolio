@@ -18,45 +18,32 @@ export const Root = () => {
     window.scrollTo(0,0)
   },[])
 
-  useEffect(()=>{
-    const handleResize = () =>{
-      if(window.innerWidth <775){
-        setIsMobileSizeSmall(true)
-      }
-      else{
-        setIsMobileSizeSmall(false)
-      }
+  // useEffect(()=>{
+  //   const handleResize = () =>{
+  //     if(window.innerWidth <775){
+  //       setIsMobileSizeSmall(true)
+  //     }
+  //     else{
+  //       setIsMobileSizeSmall(false)
+  //     }
 
-    }
+  //   }
 
-    window.addEventListener("resize", handleResize);
+  //   window.addEventListener("resize", handleResize);
 
-    return () => window.removeEventListener("resize", handleResize)
-  }, [])
+  //   return () => window.removeEventListener("resize", handleResize)
+  // }, [])
 
 
 
   useEffect(()=>{
     const handleScrollY = () =>{
-      const url = location.pathname;
-      const scrollThreshold =null;
-      if(url === "/"){
-        const scrollThreshold = 560;
+      const scrollThreshold = 800;
         if (window.scrollY > scrollThreshold) {
-          setShowSIdebar(true);
-        } else{
           setShowSIdebar(false);
-        }
-      }
-      else {
-        const scrollThreshold = -10;
-        if (window.scrollY > scrollThreshold) {
-          setShowSIdebar(true);
         } else{
-          setShowSIdebar(false);
-        }
+          setShowSIdebar(true);
       }
-
     };
 
     window.addEventListener("scroll", handleScrollY);
@@ -86,7 +73,7 @@ export const Root = () => {
   }
   return (
     <>
-        <div className={`sidebar `}>
+        <div className={`sidebar ${showSidebar ? "disappear" : ""}`}>
         {/* <div className={`sidebar ${showSidebar ? 'sidebar-visible' : ''}`}> */}
         <div
         className={`logo `}
