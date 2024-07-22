@@ -62,6 +62,14 @@ export const TechSkills = () =>{
       ],
     },
     {
+      title : 'Nextjs',
+      img : "https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg",
+      texts: [
+        "- SSR기반을 활용한 CSP 구현 가능",
+        "- Supabase 활용, 간단한 Full Stack 페이지 구현 가능",
+      ],
+    },
+    {
       title : 'Git',
       img : "https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg",
       texts: [

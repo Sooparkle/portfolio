@@ -15,7 +15,7 @@ export const Projects = () => {
       title: "Project 3",
       isAble: true,
       type : "개인",
-      name: "숙박 예약 사이트, '좀쉼쉼'",
+      name: "숙박 사이트, '좀쉼쉼' => [Refactor 진행중 : Nextjs]",
       description:
         "DB 설계 및 DB User Table 활용, 로그인 인증 가능 숙박 사이트",
       contribution: "100%",
