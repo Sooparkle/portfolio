@@ -12,9 +12,16 @@ export const Expereince = () =>{
   }
 
 
-  const handleFront= (e)=>{
+  const handleFront= (type, e)=>{
     e.stopPropagation();
-    setOpenFront(!openFront)
+
+    if(type === 'open'){
+      setOpenFront(!openFront)
+    }
+
+    if(type === 'close'){
+      setOpenFront(false)
+    } 
   }
 
   const handleUIUX= ()=>{
@@ -72,14 +79,14 @@ export const Expereince = () =>{
       <div className="experience-right">
         <div className="experience-right-top">
           <ul>
-            <li onClick={(e)=>handleFront(e)}
+            <li onClick={(e)=>handleFront('open', e)}
             >
               <p>프론트 엔드 교육</p>
               <span className="experience-more">상세보기</span>
 
               <div className={`front-end ${openFront ? "visible" : "" }`}>
                 <p><strong>프론트 엔드 교육 과정 </strong><span>(2023.09~2024.03)</span></p>
-                <Cancle onClick={()=>setOpenFront(false)} />
+                <Cancle onClick={(e)=>handleFront('close', e)} />
                 <div className="front-contents">
 
                 <div>
@@ -110,6 +117,7 @@ export const Expereince = () =>{
                 </div>
               </div>
             </li>
+            
             <li 
                 onClick={handleUIUX}
             >
