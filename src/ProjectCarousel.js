@@ -15,7 +15,6 @@ export const ProjectCarousel = ({ projects }) => {
   };
 
 const handleOpenNewTab = (project) => {
-  console.log("project", project)
     if (project.isAble === true) {
       window.open(project.url, "_blank");
       return;
