@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import redSparks from "../../assets/red_sparks.png";
 import SoeulLocal from "../../assets/local20240331.png";
 import accommodationImage from "../../assets/JejuAccomm.png";
@@ -15,12 +15,12 @@ export const Projects = () => {
       title: "Project 3",
       isAble: true,
       type : "개인",
-      name: "숙박 사이트, '좀쉼쉼' => [Refactor 진행중 : Nextjs]",
+      name: "숙박 사이트, '좀쉼쉼'",
       description:
         "DB 설계 및 DB User Table 활용, 로그인 인증 가능 숙박 사이트",
       contribution: "100%",
       imageUrl: [`${accommodationImage}`],
-      url: `https://project3-accom.pages.dev/`,
+      url: `https://edf3d9c6.next-type-accommodation.pages.dev`,
       github: "https://github.com/Sooparkle/project3/tree/home",
       gitServer: "https://github.com/Sooparkle/pj3_server/tree/main",
       contents:[
@@ -30,17 +30,15 @@ export const Projects = () => {
       ],
       star : 
       [
-        {Situation : "브라우저 CORS 정책에 의해 Client에서 Server로 데이터 요청 불가"},
-        {Task : "Server 직접 설계"},
-        {Action : "1) Node 설치 2) CORS 해결 Library 설치"},
-        {Result : "Client에서 Server 통신 가능(SOP)"},
+        {Situation : "사용자에게 더 편리한 경험 선사[React => Next]"},
+        {Task : "1)Image, Link bundler 최적화 2) UI 가독성 3) 더 많은 정보 제공"},
+        {Action : "1) Next 14 사용법 숙지 및 실행 2) Naver 파이넨셜팀 UI 적용 3) 타 숙박업소 밴처마킹"},
+        {Result : "1) 더 많은 정보 취득 가능 2) Lighthouse, Peformance 78 to 85 증가"},
       ],
       keywords: [
-        "react-router-dom",
-        "react-redux",
-        `react-reduxjs/\ntoolkit`,
+        "Next 14",
+        "Zustand",
         "react-calendar",
-        "Node.js",
         `Supabse(PostgreSQL)`,
       ],
       popup:[
@@ -59,7 +57,7 @@ export const Projects = () => {
 
       imageUrl: [`${SoeulLocal}`],
       url: "https://library-62r.pages.dev",
-      github: "https://github.com/Sooparkle/Library/tree/renewerlibrary",
+      github: "https://github.com/Sooparkle/next-accom",
       gitServer: "https://github.com/Sooparkle/pj3_server/tree/main",
       contents:[
         "교육과정 프로젝트로, '문해력'이라는 사회적 이슈 + '도서' 활용 해결 제안",
