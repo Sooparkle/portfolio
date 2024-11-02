@@ -1,0 +1,95 @@
+.points-container{
+  box-sizing: border-box;
+  padding: 4rem 2rem 12rem;
+
+}
+
+.text-bold{
+  font-weight: 800;
+}
+
+.points-container ul{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  width: 100%;
+  gap: 2rem;
+
+}
+
+
+.points-container li{
+  background: #f8f8f8;
+  border-radius: 8px;
+  box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem 1rem;
+
+}
+
+.points-container li p{
+  margin-bottom: 20px;
+}
+.points-container li div{
+  padding: 0 10px;
+  line-height: 24px;
+}
+
+.points-title{
+  font-size: 32px;
+  margin-left: 15px;
+}
+
+.points-svg svg{
+  width: 50px;
+  height: 50px;
+  vertical-align: bottom;
+}
+
+
+
+.point-list,
+.point-list2,
+.point-list3{
+  opacity: 0;
+  filter: blur(6);
+}
+
+.point-list{
+  transition: all 3s ease-in-out;
+
+}
+
+.point-list2{
+  transition: all 4.5s ease-in-out;
+}
+
+.point-list3{
+  transition: all 5.2s ease-in-out;
+}
+
+.points-activated1,
+.points-activated2,
+.points-activated3{
+  opacity: 1;
+  filter: blur(0);
+
+}
+
+
+
+@keyframes moving{
+  0%{
+    opacity: 0;
+    filter: blur(6);
+  }
+
+  80%{
+    opacity: 0.8;
+    filter: blur(4);
+  }
+
+  100%{
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+

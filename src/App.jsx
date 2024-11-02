@@ -9,6 +9,7 @@ import { Expereince } from "./components/Experience/Experience";
 import './app.scss';
 import TechSkillsText from "./components/TechSkilsText/TechSkillsText";
 import { Slideword } from "./components/Slideword/Sildeword";
+import MainPoints from "./components/points/Points";
 
 
 
@@ -103,7 +104,8 @@ function App() {
 
 
       <section id="exper" ref={sections.exper} className="tag">
-        <Expereince />
+        {/* <Expereince /> */}
+        <MainPoints />
       </section>
 
 
