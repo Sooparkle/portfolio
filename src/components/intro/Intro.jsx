@@ -6,7 +6,6 @@ import "./Intro.scss";
 
 export const Intro = () => {
   const introRef = useRef();
-  const [ isVisiable, setIsVisiable ] = useState(false);
 
 
   return (
@@ -16,7 +15,7 @@ export const Intro = () => {
     >
       <div className="intro-top">Portfolio</div>
       <div 
-      className={`intro-middle ${isVisiable ? "activated" : ""}`}
+      className='intro-middle'
       >
         빠르게 팀에 녹아들어 사용자에게<br />편리성을 생각하는 사람.
       </div>
