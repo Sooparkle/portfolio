@@ -96,7 +96,7 @@ export const TechSkills = () =>{
     <div className="tech-wrap" >
       <h2>TECH SKILLS</h2>
       <div className="tech-tip">
-        <p>각각에 스킬을 클릭하시면 간략한 정보를 볼실 수 있어요.</p>
+        {/* <p>각각에 스킬을 클릭하시면 간략한 정보를 볼실 수 있어요.</p> */}
       </div>
       <div>
         <p className="tech-wrap-title">GOOD LEVEL</p>
@@ -111,13 +111,13 @@ export const TechSkills = () =>{
             >
               <img className={skill.title.toLowerCase()} src={skill.img} alt={skill.title} />
               <div className="tech-overlay">
-              {
+              {/* {
                   skill.texts.map((text, index)=>{
                     return(
                     <p key={index} >{text}</p>
                     )
                   })
-                }
+                } */}
                 </div>
             </li>
             )
@@ -140,13 +140,13 @@ export const TechSkills = () =>{
             >
               <img className={skill.title.toLowerCase()} src={skill.img} alt={skill.title} />
               <div className="tech-overlay">
-              {
+              {/* {
                   skill.texts.map((text, index)=>{
                     return(
                     <p key={index} >{text}</p>
                     )
                   })
-                }
+                } */}
                 </div>
             </li>
             )
