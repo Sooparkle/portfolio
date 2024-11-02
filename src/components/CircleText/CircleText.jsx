@@ -17,7 +17,7 @@ const RotatingCircleText = () => {
   }, []);
 
   return (
-    <div className='container'>
+    <div className='circle-container'>
       <div className='circleWrapper'>
         {/* Rotating Circle */}
         <div className='circle'>
