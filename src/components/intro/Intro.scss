@@ -28,40 +28,67 @@
     transform: translateY(-1rem);
     animation: fadeInOut 1s ease-in-out forwards;
     animation-delay: 1.5s;
+    height: 100%;
   }
   
   .intro-middle{
-    text-align: center;
-    font-size: var(--font-exttrem-2x);
-    width: max-content;
-    place-self: center;
+    text-align: left;
+    font-size: 64px;
+    font-weight: 700;
+    max-width: max-content;
+    word-break: keep-all;
     letter-spacing: -0.4px;
+    height: 100%;
+    margin-left: 8%;
+    animation: identifier 3s ease-in-out;
 
-    > span {
-      position: relative;
-
-      &::before{
-        content: "SOLVER.";
-        font-weight: 600;
-        animation: word 5s infinite;
-      }
-
-      &::after{
-        content: "";
-        position: absolute;
-        width:calc(100% + 14px);
-        height: 100%;
-        background:#000;
-        border-left: 2px solid #fff ;
-        right: -12px;
-        animation: 
-          cursor 750ms infinite, 
-          typing 2.7s steps($typingNumber) infinite;
-        animation-delay: .8s;
-      }
+    & .activated {
+      opacity: 1;
+      filter: blur(0);
     }
+
   }
 
+  @keyframes identifier {
+    0%{
+      opacity: 0;
+    filter: blur(6);
+    }
+
+    70%{
+      opacity: 0.8;
+      filter: blur(4);
+    }
+
+    100%{
+      opacity: 1;
+      filter: blur(0);
+    }
+    
+  }
+
+
+  .intro-text{
+    letter-spacing: -0.4px;
+    max-width: 340px;
+    width: 100%;
+    height: 100%;
+    place-self: end;
+    margin-right: 8%;
+    word-break: keep-all;
+    line-height: 24px;
+    position: relative;
+
+    &::before{
+      content: " ";
+      position: absolute;
+      width: 2px;
+      height: 94px;
+      background: #fff;
+      left: -15px;
+      top: 0;
+    }
+  }
 
   .intro-down-allow {
     animation: tagMotion .8s ease-in-out infinite alternate;
@@ -75,6 +102,26 @@
     left:50%;
     bottom: 30px;
     transform: translate(-50%, -50%);
+    
+  }
+}
+
+
+@media screen and (max-width :768px) { 
+  .intro-wrap{
+    .intro-middle{
+      place-self: center;
+      font-size: 32px;
+      margin-left: 0;
+      text-align: center;
+    }
+
+    .intro-text{
+      place-self: center;
+      margin-right: 0;
+      height: max-content;
+      ;
+  }
   }
 }
 
@@ -85,12 +132,6 @@
 }
 
 
-// @keyframes word{
-
-//   75%{
-//     content: "PORTFOLIO";
-//   }
-// }
 
 @keyframes typing {
   25%, 75%{

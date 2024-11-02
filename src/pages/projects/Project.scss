@@ -22,7 +22,7 @@
 
     .project-each{
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       justify-items: center;
       place-items: center;
       gap:2rem;

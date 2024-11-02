@@ -7,6 +7,8 @@ import { Projects } from "./pages/projects/Projects";
 import { TechSkills } from "./components/techSkils/TechSkills";
 import { Expereince } from "./components/Experience/Experience";
 import './app.scss';
+import TechSkillsText from "./components/TechSkilsText/TechSkillsText";
+import { Slideword } from "./components/Slideword/Sildeword";
 
 
 
@@ -50,6 +52,29 @@ function App() {
   }, []);
 
 
+  const sectionRef = useRef(null)
+  useEffect(()=>{
+    const section = sections.tech.current;
+    let scrollPosition = 0;
+
+    const handleScroll = () => {
+      const scrollDelta = window.scrollY - scrollPosition;
+      scrollPosition = window.scrollY
+
+      if(section){
+        section.scrollLeft =+ scrollDelta;
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  },[])
+
+
+
 
   return (
 
@@ -58,21 +83,29 @@ function App() {
         <Intro />
       </section>
 
-      <section id="whoami" ref={sections.whoami} className="who-tag">
-        <Who />
-      </section>
 
       <section id="tech" ref={sections.tech} className="tag">
-        <TechSkills />
+        {/* <TechSkills /> */}
+        <TechSkillsText />
       </section>
+
+
 
       <section id="projects" ref={sections.projects} className="tag">
         <Projects />
       </section>
 
+      <Slideword />
+      
+      <section id="whoami" ref={sections.whoami} className="who-tag">
+        <Who />
+      </section>
+
+
       <section id="exper" ref={sections.exper} className="tag">
         <Expereince />
       </section>
+
 
       <section >
         <Footer />

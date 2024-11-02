@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import redSparks from "../../assets/red_sparks.png";
 import SoeulLocal from "../../assets/local20240331.png";
-import accommodationImage from "../../assets/JejuAccomm.png";
+import accommodationImage from "../../assets/jomswimswim.png";
 import "./Project.scss";
 import { PopupList } from "./Popup";
 import { HiOutlineDotsVertical } from "react-icons/hi";

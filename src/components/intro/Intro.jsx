@@ -1,14 +1,24 @@
+import { useEffect, useRef, useState } from "react";
 import { ReactComponent as DownAllow } from "../../assets/DownAllow.svg";
 import RotatingCircleText from "../CircleText/CircleText";
 import { Slideword } from "../Slideword/Sildeword";
 import "./Intro.scss";
 
 export const Intro = () => {
+  const introRef = useRef();
+  const [ isVisiable, setIsVisiable ] = useState(false);
+
+
   return (
-    <div div className="intro-wrap">
+    <div 
+      ref={introRef}
+      className="intro-wrap"
+    >
       <div className="intro-top">Portfolio</div>
-      <div className="intro-middle">
-        빠르게 팀에 녹아들어 사용자에게<br />편리성을 생각하는 사람
+      <div 
+      className={`intro-middle ${isVisiable ? "activated" : ""}`}
+      >
+        빠르게 팀에 녹아들어 사용자에게<br />편리성을 생각하는 사람.
       </div>
       <div
         className="intro-text"
