@@ -47,6 +47,30 @@
       filter: blur(0);
     }
 
+    .intro-slogan-text{
+      position: relative;
+
+      &::after{
+        content: " ";
+        background-color: #d97757;
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        width: 100%;
+        height: 4px;
+        border-radius: 4px;
+
+        // scale을 사용하는 이융.
+        // GPU 가속기만 사용하기 때문에 페이지 레이아웃을 다시 그릴 필요 없음.
+        transform: scaleX(0);
+        transform-origin: left;
+
+        animation: underline 2s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+        animation-delay: .5s;
+
+      }
+    }
+
   }
 
   @keyframes identifier {
@@ -67,6 +91,10 @@
     
   }
 
+  @keyframes underline {
+    0% {transform: scaleX(0);}
+    100% {transform: scaleX(1);}
+  }
 
   .intro-text{
     letter-spacing: -0.4px;

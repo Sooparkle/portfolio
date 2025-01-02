@@ -17,7 +17,11 @@ export const Intro = () => {
       <div 
       className='intro-middle'
       >
-        빠르게 팀에 녹아들어 사용자에게<br />편리성을 생각하는 사람.
+        <span
+          className="intro-slogan-text"
+        >빠르게 팀에 녹아들어</span> 사용자에게<br /><span
+        className="intro-slogan-text"
+        >편리성</span>을 생각하는 사람.
       </div>
       <div
         className="intro-text"
