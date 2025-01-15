@@ -19,13 +19,14 @@ export const Projects = () => {
       name: "컨퍼런스-언컨퍼런스 by 푸딩캠프",
       description:
         "푸딩캠프에서 주최하는 컨퍼런스 홈페이지 프론트 엔드로써 참여",
-      contribution: "프론트 : 약 92%",
+      contribution: "프론트 : 100%",
       imageUrl: [`${puddingcamp}`],
       url: `https://conference.puddingcamp.com/`,
       github: "https://puddingcamp.com/meetups/conference2024/staffs#staff-soo-parkle",
       contents:[
         "기획자 + 디자이너 + 백 엔드 개발자와 협업",
         "총 약 310명 신청 (오프라인 신청자 : 약 60명, 온라인 신청자 : 약 250명)",
+        "TossPayment 결제 연동"
       ],
       star : 
       [
