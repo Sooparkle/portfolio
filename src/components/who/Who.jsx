@@ -1,5 +1,4 @@
-import { ReactComponent as LinkedIn } from "../../assets/Linkedin.svg";
-import { ReactComponent as Github } from "../../assets/github.svg";
+
 import pic1 from "../../assets/Osaka.jpeg";
 import pic2 from "../../assets/tea2.jpeg";
 import pic0 from "../../assets/computer.jpg";
@@ -25,7 +24,13 @@ export const Who = () => {
         </div>
         <div className="who-info-wrap">
           <p className="who-name">임수한</p>
-          <p className="who-position">Front-end Developer</p>
+          <div
+            className="who-positions-container"
+          >
+            <p className="who-position">Planner</p>
+            <p className="who-position">Manager</p>
+            <p className="who-position">Front-end Developer</p>
+          </div>
 
           <div>
 
