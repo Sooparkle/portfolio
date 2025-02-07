@@ -32,7 +32,6 @@ const MainPoints = () =>{
 
   },[pointArea])
 
-  console.log("TESt", isActivated)
 
   return(
     <article

@@ -10,6 +10,7 @@ import './app.scss';
 import TechSkillsText from "./components/TechSkilsText/TechSkillsText";
 import { Slideword } from "./components/Slideword/Sildeword";
 import MainPoints from "./components/points/Points";
+import BlogFeed from "./components/BlogFeed/BlogFeed";
 
 
 
@@ -75,6 +76,7 @@ function App() {
   },[])
 
 
+ 
 
 
   return (
@@ -111,6 +113,10 @@ function App() {
 
       <section >
         <Footer />
+      </section>
+
+      <section>
+        <BlogFeed />
       </section>
     </>
 
