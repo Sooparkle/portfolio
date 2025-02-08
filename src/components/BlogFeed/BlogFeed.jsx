@@ -1,9 +1,12 @@
 import { useEffect, useState } from 'react';
+import './BlogFeed.scss'
+import noImage from '../../assets/no_image.jpg';
 
-const useBlogFeed = () => {
+const BlogFeed = () => {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [getImage, setGetImage] = useState('')
 
   useEffect(() => {
     const fetchBlogFeed = async () => {
@@ -22,6 +25,10 @@ const useBlogFeed = () => {
         const xmlDoc = parser.parseFromString(data, 'text/xml');
         
         const items = xmlDoc.querySelectorAll('item');
+        const img =  xmlDoc.querySelector('image').querySelector('url')?.textContent ||"";
+
+        setGetImage(img)
+
         const parsedPosts = Array.from(items).map(item => {
           // description 내용을 임시 div에 파싱
           const descriptionContent = item.querySelector('description')?.textContent || '';
@@ -36,7 +43,7 @@ const useBlogFeed = () => {
             const firstParagraph = tempDiv.querySelector('p')?.textContent?.trim() || '';
 
           return {
-            title: item.querySelector('title')?.textContent || '',
+            title: item.querySelector('title')?.textContent.replace(/&quot;/g, '') || '',
             link: item.querySelector('link')?.textContent || '',
             // description: paragraphs.join('\n'), // 추출된 텍스트들을 줄바꿈으로 연결
             description: firstParagraph,
@@ -56,34 +63,45 @@ const useBlogFeed = () => {
     fetchBlogFeed();
   }, []);
 
-  return { posts, loading, error };
-};
 
-const BlogFeed = () => {
-  const { posts, loading, error } = useBlogFeed();
-
-  if (loading) return <div>블로그 포스트를 불러오는 중...</div>;
+  if (loading) return <div className='blog-feed' >블로그 포스트를 불러오는 중...</div>;
   if (error) return <div>에러 발생: {error}</div>;
 
   return (
     <div className="blog-feed">
-      <h2>최근 블로그 포스트</h2>
-      <div className="posts-container">
-        {posts.map((post, index) => (
-          <article key={index} className="post-card">
-            <h3>{post.title}</h3>
-            <div className="description">
-              {post.description.split('\n').map((paragraph, i) => (
-                <p key={i}>{paragraph}</p>
-              ))}
-            </div>
-            <a href={post.link} target="_blank" rel="noopener noreferrer">
-              자세히 보기
+      <h2>BLOG POSTING</h2>
+
+      <div className='scroll-container'>
+        <div className="posts-container">
+          {posts.map((post, index) => (
+            <a href={post.link} target='_blank' rel="noopener noreferrer" >
+              <article key={index} className="post-card">
+                <img 
+                className="post-img"
+                src={getImage || noImage} 
+                alt="Blog 대표 이미지" 
+                />
+                <h4>{post.title}</h4>
+                <div className="description">
+                  {post.description.split('\n').map((paragraph, i) => (
+                    <p key={i}>{paragraph}</p>
+                  ))}
+                </div>
+                <time>{new Date(post.pubDate).toLocaleDateString()}</time>
+              </article>
             </a>
-            <time>{new Date(post.pubDate).toLocaleDateString()}</time>
-          </article>
-        ))}
+          ))}
+        </div>
       </div>
+
+      <a 
+      className='blog-more'
+      href="https://life-explorer.tistory.com/"
+      target='_blank' rel="noopener noreferrer"
+      >
+          더보기
+      </a>
+
     </div>
   );
 };

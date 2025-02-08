@@ -76,7 +76,6 @@ function App() {
   },[])
 
 
- 
 
 
   return (
@@ -111,13 +110,15 @@ function App() {
       </section>
 
 
+      <section>
+        <BlogFeed />
+      </section>
+
       <section >
         <Footer />
       </section>
 
-      <section>
-        <BlogFeed />
-      </section>
+
     </>
 
   );
