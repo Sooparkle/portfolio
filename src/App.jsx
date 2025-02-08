@@ -12,10 +12,7 @@ import { Slideword } from "./components/Slideword/Sildeword";
 import MainPoints from "./components/points/Points";
 import BlogFeed from "./components/BlogFeed/BlogFeed";
 
-
-
 function App() {
-  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -25,23 +22,31 @@ function App() {
     whoami: useRef(null),
     exper: useRef(null),
     tech: useRef(null),
-    projects : useRef(null),
+    projects: useRef(null),
     extra: useRef(null),
   };
+
+  const sectionComponents = [
+    { id: 'intro', component: <Intro />, ref: sections.intro, className: 'tag' },
+    { id: 'tech', component: <TechSkillsText />, ref: sections.tech, className: 'tag' },
+    { id: 'projects', component: <Projects />, ref: sections.projects, className: 'tag' },
+    { id: 'whoami', component: <Who />, ref: sections.whoami, className: 'who-tag' },
+    { id: 'exper', component: <MainPoints />, ref: sections.exper, className: 'tag' },
+    { id: 'blog', component: <BlogFeed />, ref: null, className: '' },
+    { id: 'footer', component: <Footer />, ref: null, className: '' }
+  ];
   
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) =>
         entries.forEach((entry) => {
           const sectionRef = sections[entry.target.id];
-          // console.log("SectionRef", sectionRef);
           if(sectionRef && sectionRef.current){
             if (entry.isIntersecting) {
               sectionRef.current.classList.add('visible');
               observer.unobserve(entry.target);
             } 
           }
-
         }),
       { threshold: 0.2 }
     );
@@ -53,74 +58,35 @@ function App() {
     return () => observer.disconnect();
   }, []);
 
-
-  const sectionRef = useRef(null)
-  useEffect(()=>{
+  useEffect(() => {
     const section = sections.tech.current;
     let scrollPosition = 0;
 
     const handleScroll = () => {
       const scrollDelta = window.scrollY - scrollPosition;
-      scrollPosition = window.scrollY
+      scrollPosition = window.scrollY;
 
       if(section){
-        section.scrollLeft =+ scrollDelta;
+        section.scrollLeft += scrollDelta;
       }
-    }
+    };
 
     window.addEventListener('scroll', handleScroll);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll)
-    }
-  },[])
-
-
-
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-
     <>
-      <section id="intro" ref={sections.intro} className="tag">
-        <Intro />
-      </section>
-
-
-      <section id="tech" ref={sections.tech} className="tag">
-        {/* <TechSkills /> */}
-        <TechSkillsText />
-      </section>
-
-
-
-      <section id="projects" ref={sections.projects} className="tag">
-        <Projects />
-      </section>
-
+      {sectionComponents.map(({ id, component, ref, className }) => (
+        <section key={id} id={id} ref={ref} className={className}>
+          {component}
+        </section>
+      ))}
       <Slideword />
-      
-      <section id="whoami" ref={sections.whoami} className="who-tag">
-        <Who />
-      </section>
-
-
-      <section id="exper" ref={sections.exper} className="tag">
-        {/* <Expereince /> */}
-        <MainPoints />
-      </section>
-
-
-      <section>
-        <BlogFeed />
-      </section>
-
-      <section >
-        <Footer />
-      </section>
-
-
     </>
-
   );
 }
 

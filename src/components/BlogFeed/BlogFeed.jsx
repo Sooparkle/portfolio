@@ -74,8 +74,8 @@ const BlogFeed = () => {
       <div className='scroll-container'>
         <div className="posts-container">
           {posts.map((post, index) => (
-            <a href={post.link} target='_blank' rel="noopener noreferrer" >
-              <article key={index} className="post-card">
+            <a href={post.link} target='_blank' rel="noopener noreferrer" key={index} >
+              <article  className="post-card">
                 <img 
                 className="post-img"
                 src={getImage || noImage} 
