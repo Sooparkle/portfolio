@@ -64,7 +64,22 @@ const BlogFeed = () => {
   }, []);
 
 
-  if (loading) return <div className='blog-feed' >블로그 포스트를 불러오는 중...</div>;
+  if (loading) return (
+    <div className="blog-feed">
+      <h2>BLOG POSTING</h2>
+      <div className='blog-loading-Skeleton' >
+        {/* Skeleton UI) */}
+        {[...Array(5)].map((_, index) => (
+          <div key={index}>
+            <div className='skeleton-img'></div>
+            <div className='skeleton-title'></div>
+            <div className='skeleton-description'></div>
+            <div className='skeleton-date'></div>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
   if (error) return <div>에러 발생: {error}</div>;
 
   return (
