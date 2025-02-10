@@ -32,7 +32,6 @@ const RotatingCircleText = () => {
               key={index}
               className='letter'
               style={{
-                transformOrigin: '0 100px',
                 transform: `rotate(${letter.rotation}deg)`
               }}
             >

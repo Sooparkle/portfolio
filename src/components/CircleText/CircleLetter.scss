@@ -40,15 +40,34 @@
   font-size: 18px;
   color: #2c3e50;
   color: #fff;
+  transform-origin: 0 100px;
 }
 
 @media screen and (max-width: 768px) {
+  .circleWrapper{
+    width: 150px;
+    height: 150px;
+  }
+
+  .textCircle{
+    width: 150px;
+    height: 150px;
+  }
+
   .circle-container{
     top: 44%;
     left: 50%;
     transform: translateX(-50%);
 
   }
+  .letter{
+    font-size: 18px;
+    transform-origin: 0 74px;
+  }
+  .circle{
+    display: none;
+  }
+
 }
 
 @keyframes rotate {
