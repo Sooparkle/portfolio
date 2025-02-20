@@ -26,10 +26,12 @@ function App() {
     extra: useRef(null),
   };
 
-  const sectionComponents = [
+  const sectionComponents1 = [
     { id: 'intro', component: <Intro />, ref: sections.intro, className: 'tag' },
     { id: 'tech', component: <TechSkillsText />, ref: sections.tech, className: 'tag' },
     { id: 'projects', component: <Projects />, ref: sections.projects, className: 'tag' },
+  ];
+  const sectionComponents2 = [
     { id: 'whoami', component: <Who />, ref: sections.whoami, className: 'who-tag' },
     { id: 'exper', component: <MainPoints />, ref: sections.exper, className: 'tag' },
     { id: 'blog', component: <BlogFeed />, ref: null, className: '' },
@@ -80,12 +82,19 @@ function App() {
 
   return (
     <>
-      {sectionComponents.map(({ id, component, ref, className }) => (
+      {sectionComponents1.map(({ id, component, ref, className }) => (
         <section key={id} id={id} ref={ref} className={className}>
           {component}
         </section>
       ))}
+
       <Slideword />
+
+      {sectionComponents2.map(({ id, component, ref, className }) => (
+        <section key={id} id={id} ref={ref} className={className}>
+          {component}
+        </section>
+      ))}
     </>
   );
 }
