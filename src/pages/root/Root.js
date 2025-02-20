@@ -1,10 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Outlet, Link, useNavigate, useLocation, useFetcher, NavLink } from "react-router-dom";
-import { PAGE_LIST } from "../../contents";
+import { Outlet, Link, useNavigate, useLocation, useFetcher, NavLink, useParams, ScrollRestoration } from "react-router-dom";
 import { IoMdPerson } from "react-icons/io";
 import { AiFillProject } from "react-icons/ai";
-import { RiInformationFill } from "react-icons/ri";
-
+import { MdOutlineKeyboardBackspace } from "react-icons/md";
 import "./Root.scss";
 
 export const Root = () => {
@@ -71,39 +69,72 @@ export const Root = () => {
     const targetSection = document.getElementById(targetSectionId);
     targetSection.scrollIntoView({behavior:"smooth"});
   }
-  return (
-    <>
-        <div className={`sidebar ${showSidebar ? "disappear" : ""}`}>
-        {/* <div className={`sidebar ${showSidebar ? 'sidebar-visible' : ''}`}> */}
-        <div
-        className={`logo `}
-        onClick={()=>handleNavigate()}
-        >
-        <p>SOOHAN's</p>
+console.log("Location PathName", typeof location.pathname)
 
+  if(location.pathname !== "/projects") {
+    return (
+      <>
+        <div className={`sidebar ${showSidebar ? "disappear" : ""}`}>
+          {/* <div className={`sidebar ${showSidebar ? 'sidebar-visible' : ''}`}> */}
+          <div
+          className={`logo `}
+          onClick={()=>handleNavigate()}
+          >
+          <p>SOOHAN's</p>
+  
+          </div>
+  
+          <nav >
+            <ul>
+              <li 
+                onClick={(e)=>handleNavLinkScrolling(e, 'whoami')}
+                className="nav-item" >
+                <Link to="#"><IoMdPerson /><span className="mobile">WHOAMI</span></Link>
+              </li>
+              <li
+                onClick={(e)=>handleNavLinkScrolling(e, 'projects')} 
+                className="nav-item">
+                <Link to="#"><AiFillProject /><span className="mobile" >PROJECTS</span></Link>
+              </li>
+            </ul>
+  
+          </nav>
+        </div>
+  
+        <div  className="detail">
+        <Outlet />
+        <ScrollRestoration />
+  
+        </div>
+      </>
+    );
+  } else {
+    return (
+      <> 
+        <div className="project-header" >
+        <div
+          className={`logo `}
+          onClick={()=>handleNavigate()}
+          >
+          <p>SOOHAN's</p>
+  
+          </div>
+
+          <h3>
+            Project Detail
+          </h3>
         </div>
 
-        <nav >
-          <ul>
-            <li 
-              onClick={(e)=>handleNavLinkScrolling(e, 'whoami')}
-              className="nav-item" >
-              <Link to="#"><IoMdPerson /><span className="mobile">WHOAMI</span></Link>
-            </li>
-            <li
-              onClick={(e)=>handleNavLinkScrolling(e, 'projects')} 
-              className="nav-item">
-              <Link to="#"><AiFillProject /><span className="mobile" >PROJECTS</span></Link>
-            </li>
-          </ul>
 
-        </nav>
-      </div>
+        <div  className="detail">
+        <Outlet />
+        <ScrollRestoration />
 
-      <div  className="detail">
-      <Outlet />
+        </div>
+      </>
+    );
+  }
+  
 
-      </div>
-    </>
-  );
+  
 }

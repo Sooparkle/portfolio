@@ -16,10 +16,7 @@
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
-  .logo{
-    cursor: pointer;
-    font-weight: 600;
-  }
+
 
   &.disappear{
     // display: none;
@@ -68,6 +65,44 @@
     }
   }
 }
+
+.logo{
+  cursor: pointer;
+  font-weight: 600;
+  &:hover{
+    animation: squish 200ms ease-in-out;
+  }
+}
+
+
+.project-header{
+  display: flex;
+  height: 56px;
+  padding: 0 2rem;
+  border-bottom: 1px solid var(--color-light);
+  align-items: center;
+
+  
+  button {
+    all: unset;
+  
+    &:hover{
+      animation: squish 200ms ease-in-out;
+    }
+  }
+  svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  h3{
+    margin-inline: auto;
+
+  }
+}
+
+
+
 
 @media screen and (max-width : 768px){
 
