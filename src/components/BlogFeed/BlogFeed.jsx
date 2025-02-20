@@ -114,7 +114,7 @@ const BlogFeed = () => {
       href="https://life-explorer.tistory.com/"
       target='_blank' rel="noopener noreferrer"
       >
-          더보기
+        방문하기
       </a>
 
     </div>
