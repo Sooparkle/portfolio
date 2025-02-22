@@ -1,6 +1,6 @@
-#
+# 포트폴리오 제작
+## 포트폴리오 제작
 
-## setup libraries
-- react-router-dom
-- react-redux
-- react-reduxtoolkits
+현재 버전 3.4(2025.02.)
+--
+버전 3.0(2024.08.)
