@@ -1,8 +1,7 @@
-import React, { useState, useEffect, useRef } from "react";
-import { Outlet, Link, useNavigate, useLocation, useFetcher, NavLink, useParams, ScrollRestoration } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Outlet, Link, useNavigate, useLocation, ScrollRestoration } from "react-router-dom";
 import { IoMdPerson } from "react-icons/io";
 import { AiFillProject } from "react-icons/ai";
-import { MdOutlineKeyboardBackspace } from "react-icons/md";
 import "./Root.scss";
 
 export const Root = () => {
@@ -69,11 +68,10 @@ export const Root = () => {
     const targetSection = document.getElementById(targetSectionId);
     targetSection.scrollIntoView({behavior:"smooth"});
   }
-console.log("Location PathName", typeof location.pathname)
 
-  if(location.pathname !== "/projects") {
+  if(!location.pathname.startsWith("/projects")) {
     return (
-      <>
+      <header>
         <div className={`sidebar ${showSidebar ? "disappear" : ""}`}>
           {/* <div className={`sidebar ${showSidebar ? 'sidebar-visible' : ''}`}> */}
           <div
@@ -106,11 +104,11 @@ console.log("Location PathName", typeof location.pathname)
         <ScrollRestoration />
   
         </div>
-      </>
+      </header>
     );
   } else {
     return (
-      <> 
+      <header> 
         <div className="project-header" >
         <div
           className={`logo `}
@@ -131,7 +129,7 @@ console.log("Location PathName", typeof location.pathname)
         <ScrollRestoration />
 
         </div>
-      </>
+      </header>
     );
   }
   
