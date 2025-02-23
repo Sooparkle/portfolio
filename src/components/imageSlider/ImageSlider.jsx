@@ -5,19 +5,19 @@ import { FaAnglesRight } from "react-icons/fa6";
 import { GoDotFill } from "react-icons/go";
 import { GoDot } from "react-icons/go";
 
-export const ImageSlider = ({imageUrls}) => {
+export const ImageSlider = ({images}) => {
   const [imageIndex, setImageIndex] = useState(0);
 
   const showPrevImages = () =>{
     setImageIndex(index =>{
-      if(index === 0) return imageUrls.length -1
+      if(index === 0) return images.length -1
       return index -1
     })
   }
 
   const showNextImages = () =>{
     setImageIndex(index =>{
-      if(index === imageUrls.length -1) return 0
+      if(index === images.length -1) return 0
       return index +1
     })
   }
@@ -29,16 +29,22 @@ export const ImageSlider = ({imageUrls}) => {
       <div
         className='who-slider-images'
       >
-      {
-        imageUrls.map((url,index) => (
+        <picture>
+          <source
+            media="(max-width: 768px)"
+            srcSet={images[imageIndex].small}
+          />
+          <source
+            media="(min-width: 769px)"
+            srcSet={images[imageIndex].large}
+          />
           <img 
-            key={index} 
-            src={url} 
-            style={{translate : `${-100 * imageIndex}%`}}
-            className={`img-slider-img`}/>
-
-        ))
-      }
+            src={images[imageIndex].large}
+            className="img-slider-img"
+            loading="lazy"
+            alt={`Slide Image ${imageIndex + 1}`}
+          />
+        </picture>
       </div>
       <button
         onClick={showPrevImages}
@@ -56,7 +62,7 @@ export const ImageSlider = ({imageUrls}) => {
 
       <div className="slide-imgs-dot-wrap">
         {
-          imageUrls.map((a, index)=>(
+          images.map((a, index)=>(
             <button
               key={index}
               className="slide-imgs-dot"

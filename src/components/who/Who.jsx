@@ -1,6 +1,8 @@
 import pic1 from "../../assets/Osaka.jpeg";
-import pic2 from "../../assets/tea2.jpeg";
-import pic0 from "../../assets/computer.jpg";
+import pic1_s from "../../assets/Osaka_s.png";
+import pic0 from "../../assets/computer.png";
+import pic0_s from "../../assets/computer_s.png";
+
 import { ImageSlider } from "../imageSlider/ImageSlider";
 import "./Who.scss";
 import { useState } from "react";
@@ -8,7 +10,16 @@ import { FaCaretRight } from "react-icons/fa6";
 import { ContactSmall } from "../ContactSmall/ContactSmall";
 
 export const Who = () => {
-  const IMAGES = [pic0, pic1, pic2];
+  const IMAGES = [
+    {
+      large: pic0,
+      small : pic0_s
+    },
+    {
+      large : pic1,
+      small : pic1_s
+    }
+  ];
   
   const [clickStates, setClickStates] = useState({
     health: false,
@@ -31,12 +42,12 @@ export const Who = () => {
       description: "세상의 다양한 지식에 대한 호기심이 많아 저렴하고 검증된 자료를 바탕으로 작성된 책을 통해 지식 습득을 좋아합니다",
       highlightText: "저렴하고 검증된 자료를 바탕으로 작성된 책을 통해 지식 습득을"
     },
-    {
-      id: "tea",
-      title: "TEA",
-      description: "차(TEA)를 좋아합니다. 커피를 마시지 않아 대신 보이차, 홍차, 허브차 등을 마십니다.",
-      highlightText: "대신 보이차, 홍차, 허브차 등을 마십니다."
-    }
+    // {
+    //   id: "tea",
+    //   title: "TEA",
+    //   description: "차(TEA)를 좋아합니다. 커피를 마시지 않아 대신 보이차, 홍차, 허브차 등을 마십니다.",
+    //   highlightText: "대신 보이차, 홍차, 허브차 등을 마십니다."
+    // }
   ];
 
   const handleClick = (id) => {
@@ -51,7 +62,7 @@ export const Who = () => {
       <h2>WHO AM I</h2>
       <div className="who-content">
         <div className="who-img-wrap">
-          <ImageSlider imageUrls={IMAGES} />
+          <ImageSlider images={IMAGES} />
         </div>
         <div className="who-info-wrap">
           <p className="who-name">임수한</p>
