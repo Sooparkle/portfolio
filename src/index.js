@@ -9,6 +9,7 @@ import { Root } from './pages/root/Root';
 import { Projects } from './pages/projects/Projects';
 import { Who } from './components/who/Who';
 import { Contact } from './components/contact/Contact';
+import Detail from './components/ProjectDeatil/Detail';
 // import reportWebVitals from './reportWebVitals';
 
 
@@ -23,11 +24,7 @@ const router = createBrowserRouter([
       },
       {
         path:`${PAGE_LIST.PROJECTS}`,
-        element:<Projects />
-      },
-      {
-        path:`${PAGE_LIST.PROJECTS}/:project1`,
-        element:<Projects />
+        element:<Detail />
       },
       {
         path:`${PAGE_LIST.WHO}`,
@@ -36,7 +33,8 @@ const router = createBrowserRouter([
       {
         path :`${PAGE_LIST.CONTACT}`,
         element:<Contact />
-      }
+      },
+
     ]
   }
 ]);
