@@ -6,7 +6,8 @@ import './CircleLetter.scss'
 
 const RotatingCircleText = () => {
   const [letters, setLetters] = useState([]);
-  const text = "UiUxThinker & Front End Programmer.";
+  // const text = "UiUxThinker & Front-End Programmer.";
+  const text = "& PM & Planer & UI / UX Thinker & Front-End ";
 
   useEffect(() => {
     const letterArray = text?.split('').map((char, index) => ({

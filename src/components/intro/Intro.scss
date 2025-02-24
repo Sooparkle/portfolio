@@ -46,7 +46,10 @@
       opacity: 1;
       filter: blur(0);
     }
-
+    .intro-slogan-text-sm{
+      font-size: 18px;
+      font-weight: 400;
+    }
     .intro-slogan-text{
       position: relative;
 
@@ -112,10 +115,11 @@
       content: " ";
       position: absolute;
       width: 2px;
-      height: 94px;
+      height: 74px;
       background: #fff;
       left: -15px;
       top: 0;
+      border-radius: 2px;
     }
   }
 
@@ -129,7 +133,7 @@
     position: absolute;
     width:40px;
     left:50%;
-    bottom: 30px;
+    bottom: 1%;
     transform: translate(-50%, -50%);
     
   }
@@ -138,6 +142,7 @@
 
 @media screen and (max-width :768px) { 
   .intro-wrap{
+    padding: 0 18px;
     .intro-middle{
       place-self: center;
       font-size: 32px;

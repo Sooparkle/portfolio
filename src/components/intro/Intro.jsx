@@ -17,13 +17,11 @@ export const Intro = () => {
       <div 
       className='intro-middle'
       >
-        빠르게 팀과 협업하고 <span className="intro-slogan-text">사용자를</span><br />
-        생각하며 <span className="intro-slogan-text">공간을 디자인하는 사람</span>
+        All-Rounder<span className="intro-slogan-text"><span className="intro-slogan-text-sm">(디자인, 기획, 매니징, 개발)</span></span><br />
+        <span className="intro-slogan-text">협업 기반</span> 플레이어<span className="intro-slogan-text-sm">(Player)</span>
       </div>
-      <div
-        className="intro-text"
-      >
-        무엇인가를 직접 만지고 분해, 조립하는 것을 좋아합니다. 매니저를 해보다가 직접 화면은 설계해 보는 것 또 어떤 재미가 있을까라는 궁금증을 2023년부터 갖기 시작했습니다.
+      <div className="intro-text">
+        매니징을 해보니, 작은 UI/UX의 변화만으로 고객과 사용자가 변화하는 모습을 보고 궁금증 갖고 2023년부터 프론트 개발 공부를 시작했습니다.
       </div>
       {/* <div className="intro-end">Front-End</div> */}
       <div className="intro-allow">
