@@ -6,6 +6,7 @@ import "./Project.scss";
 import { PopupList } from "./Popup";
 import { HiOutlineDotsVertical } from "react-icons/hi";
 import puddingcamp from '../../assets/puddingcamp.png'
+import { Link } from "react-router-dom";
 
 export const Projects = () => {
   const [ popupdot, togglePopupdot ] = useState(null);
@@ -251,14 +252,15 @@ const handleToggle = (id,e) =>{
 
                 {/* project buttons area */}
                 <div className="project-icon-wrap">
-                  <button 
+                  <Link to={`/projects/#${item.title.replace(" ","")}`} className="project-detail-link"> 상세보기 </Link>
+                  {/* <button 
                     className="project-live"
                     onClick={() => handleOpenDemo(item)}>
                     Live Demo
-                  </button>
+                  </button> */}
 
                   {/* popupdot area */}
-                  <button
+                  {/* <button
                     className="project-popupdot"
                     onClick={(e) => handleToggle(index, e)}
                   >
@@ -267,7 +269,7 @@ const handleToggle = (id,e) =>{
                       item={item} 
                       handleToggle={handleToggle}
                     />}
-                  </button>
+                  </button> */}
                 </div>
 
                 </div>

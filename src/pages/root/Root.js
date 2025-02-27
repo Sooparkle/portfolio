@@ -4,7 +4,7 @@ import { IoMdPerson } from "react-icons/io";
 import { AiFillProject } from "react-icons/ai";
 import "./Root.scss";
 
-export const Root = () => {
+export const Root = ({sections}) => {
   const [ showSidebar, setShowSIdebar ] = useState(false);
   const [isMobileView, setIsMobileView] = useState(window.innerWidth <775);
   const [ isMobileSizeSmall, setIsMobileSizeSmall ] = useState(false);
@@ -63,11 +63,20 @@ export const Root = () => {
   }
 
 
-  const handleNavLinkScrolling = (e, targetSectionId) =>{
+  const handleNavLinkScrolling = (e, targetSectionId) => {
     e.preventDefault();
-    const targetSection = document.getElementById(targetSectionId);
-    targetSection.scrollIntoView({behavior:"smooth"});
-  }
+    console.log('Attempting to scroll...');
+    
+    if (sections && sections[targetSectionId] && sections[targetSectionId].current) {
+      console.log('Element found, scrolling to:', sections[targetSectionId].current);
+      try {
+        sections[targetSectionId].current.scrollIntoView({ behavior: "smooth" });
+        console.log('Scroll complete');
+      } catch (error) {
+        console.error('Scroll failed:', error);
+      }
+    }
+  };
 
   if(!location.pathname.startsWith("/projects")) {
     return (
@@ -84,15 +93,14 @@ export const Root = () => {
   
           <nav >
             <ul>
-              <li 
-                onClick={(e)=>handleNavLinkScrolling(e, 'whoami')}
+              {/* <li 
                 className="nav-item" >
                 <Link to="#"><IoMdPerson /><span className="mobile">WHOAMI</span></Link>
-              </li>
+              </li> */}
               <li
-                onClick={(e)=>handleNavLinkScrolling(e, 'projects')} 
+                // onClick={(e)=>handleNavLinkScrolling(e, 'projects')} 
                 className="nav-item">
-                <Link to="#"><AiFillProject /><span className="mobile" >PROJECTS</span></Link>
+                <Link to="/projects"><AiFillProject /><span className="mobile" >PROJECTS</span></Link>
               </li>
             </ul>
   
