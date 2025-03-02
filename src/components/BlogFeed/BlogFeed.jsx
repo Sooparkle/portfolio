@@ -1,11 +1,11 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './BlogFeed.scss'
 import noImage from '../../assets/no_image.jpg';
 
 const BlogFeed = () => {
   const [posts, setPosts] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(true);
   const [getImage, setGetImage] = useState('')
 
   useEffect(() => {
@@ -64,6 +64,36 @@ const BlogFeed = () => {
   }, []);
 
 
+  const cardRef = useRef(null);
+  const [ style, setStyle ] = useState({
+    transform : 'rotateX(0) rotateY(0)',
+    transition : ''
+  });
+
+  const handleMouseMove = (e) =>{
+    const card = cardRef.current;
+    const rect = card.getBoundingClientRect();
+
+    const x = e.clientX - rect.left - rect.width / 2;
+    const y = e.clientY - rect.top - rect.height / 2;
+
+    const multiplier = 6;
+
+     // 마우스 위치에 따른 회전 각도 계산
+    setStyle({
+      transform: `rotateX(${-y / multiplier}deg) rotateY(${x / multiplier}deg)`,
+      transition: 'all 500ms ease'
+    });
+  }
+
+  const handleMouseLeave = () => {
+    // 마우스가 떠나면 원래 상태로 부드럽게 돌아가기
+    setStyle({
+      transform: 'rotateX(0) rotateY(0)',
+      transition: 'all 1.3s ease'
+    });
+  };
+
   if (loading) return (
     <div className="blog-feed">
       <h2>BLOG POSTING</h2>
@@ -80,7 +110,35 @@ const BlogFeed = () => {
       </div>
     </div>
   )
-  if (error) return <div>에러 발생: {error}</div>;
+  if (error) return (
+    <div className="blog-feed">
+      <h2>BLOG POSTING</h2>
+      <section className='blog-error-container' >
+        <div  className='blog-error-text'>
+          <h3>에고...데이터가 무거워요😭</h3>
+          <p>가져오는 데 실패했어요. <br />괜찮으면 직접 Blog에 방문해 줄 수 있을까요?</p>
+        </div>
+
+      <div
+        className='blog-error-btn'
+        ref={cardRef}
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
+        style={style}
+      >
+        <a
+          href='https://life-explorer.tistory.com/'
+          target='_blacnk'
+          >
+          방문하기
+        </a>
+
+      </div>
+
+      </section>
+    </div>
+    )
+    ;
 
   return (
     <div className="blog-feed">
