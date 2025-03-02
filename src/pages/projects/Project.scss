@@ -68,7 +68,7 @@
 
         @media screen and (max-width: 768px) {
           .project-p-img{
-            min-width: 200px;
+            min-width: 185px;
           }
         }
         
@@ -84,6 +84,7 @@
           font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
           margin-bottom: 10px;
           text-align: center;
+          word-break: keep-all;
         }
         
         p:nth-of-type(2){
@@ -552,3 +553,21 @@
 }
 
 
+
+@media screen and (max-width:768px) {
+  .project .project-wrap .project-each-wrap .project-each .project-info .project-keywords {
+    display: none;
+}
+
+.project .project-wrap .project-each-wrap .project-each .project-info .contents {
+  display: none;
+}
+.project .project-wrap .project-each-wrap .project-each{
+  padding: 2rem 1rem;
+}
+.project .project-wrap {
+
+  padding: 3.5rem 1rem 3rem;
+
+}
+}
