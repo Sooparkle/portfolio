@@ -34,13 +34,11 @@ export const Who = () => {
       id: "health",
       title: "PROGRAMMER",
       description: "프로그램에 있어서 깊이 생각하고 스스로 고민하고 찾아보면서 끝임없이 배우려 합니다.",
-      highlightText: "깊이 생각하고 스스로 고민하고 찾아보면서 끝임없이 배우려 합니다."
     },
     {
       id: "read",
       title: "READER",
-      description: "세상의 다양한 지식에 대한 호기심이 많아 저렴하고 검증된 자료를 바탕으로 작성된 책을 통해 지식 습득을 좋아합니다",
-      highlightText: "저렴하고 검증된 자료를 바탕으로 작성된 책을 통해 지식 습득을"
+      description: "다양한 지식에 대한 호기심이 많아 검증된 자료를 바탕으로 지식 습득을 좋아합니다",
     },
     // {
     //   id: "tea",
@@ -88,8 +86,7 @@ export const Who = () => {
                   </li>
                 </ul>
                 <p className={`${clickStates[id] ? "activated" : ""}`}>
-                  {description.replace(highlightText, '')}
-                  <span>{highlightText}</span>
+                  {description}
                 </p>
               </div>
             ))}
