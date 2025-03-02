@@ -52,6 +52,7 @@
   .textCircle{
     width: 150px;
     height: 150px;
+    top: 32%;
   }
 
   .circle-container{
@@ -66,6 +67,13 @@
   }
   .circle{
     display: none;
+  }
+
+  .intro-wrap .intro-text::before{
+    top : 4px;
+    left :-11px;
+    height: 87px;
+
   }
 
 }
