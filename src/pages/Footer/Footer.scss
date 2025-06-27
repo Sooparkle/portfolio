@@ -23,3 +23,18 @@ padding: 2rem .8rem;
   }
   }
 }
+
+@media screen and (max-width : 768px) {
+  footer{
+    flex-direction: column;
+    gap: 2rem;
+
+    ul{
+      flex-direction: column;
+      order: 2
+    }
+
+
+  }
+
+}

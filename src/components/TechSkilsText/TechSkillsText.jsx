@@ -1,12 +1,22 @@
 import React, { useEffect, useRef, useState } from 'react'
 import './TechSkillsText.scss'
 
+const SoftList = [
+  'UIUX',
+  'Storyboard',
+  'Service Flow',
+  'Figma',
+  'PPT',
+];
+
 const BetterList = [
+  'Generative LLM',
   'HTML5',
   'CSS',
   'JavaScript',
   'React js',
 ];
+
 
 const GoodList = [
   'Next js',
@@ -53,13 +63,26 @@ const TechSkillsText = () => {
       className='techskills-container'
     >
       <h2>
-        TECH SKILLS
+        SKILLS
       </h2>
 
       <div
         ref={TechSkillsArea}
         className='techskills-text-better-container'
       >
+        <p
+          className={`better-list ${isIntersectionObs ? "activated" : ""}`}
+        >
+          {
+            SoftList.map((item, index) =>(
+              <span
+                key={index}
+              >
+                {item}
+              </span>
+            ))
+          }
+        </p>
         <p
           className={`better-list ${isIntersectionObs ? "activated" : ""}`}
         >

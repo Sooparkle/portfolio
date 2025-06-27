@@ -11,6 +11,9 @@ import TechSkillsText from "./components/TechSkilsText/TechSkillsText";
 import { Slideword } from "./components/Slideword/Sildeword";
 import MainPoints from "./components/points/Points";
 import BlogFeed from "./components/BlogFeed/BlogFeed";
+import { Root } from "./pages/root/Root";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
 
 function App() {
   useEffect(() => {
@@ -80,8 +83,11 @@ function App() {
     };
   }, []);
 
+  const queryClient = new QueryClient();
+
   return (
     <>
+      <Root sections={sections} /> {/* Root 컴포넌트에 sections props 전달 */}
       {sectionComponents1.map(({ id, component, ref, className }) => (
         <section key={id} id={id} ref={ref} className={className}>
           {component}
@@ -89,12 +95,13 @@ function App() {
       ))}
 
       <Slideword />
-
+      <QueryClientProvider client={queryClient}>
       {sectionComponents2.map(({ id, component, ref, className }) => (
         <section key={id} id={id} ref={ref} className={className}>
           {component}
         </section>
       ))}
+      </QueryClientProvider>
     </>
   );
 }

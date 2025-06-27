@@ -1,6 +1,7 @@
 .techskills-container{
   box-sizing: border-box;
   padding: 4rem 3rem 8rem;
+  overflow: hidden;
 }
 
 
@@ -26,28 +27,30 @@
 
 .better-list{
   font-size: 64px;
-  transform: translateX(-100%);
+
 }
 
 .better-list.activated{
-  transform: translateX(0);
+  animation: x2y 600ms ease-in-out;
 }
 
 .good-list {
   font-size: 40px;
-  transform: translateX(100%);
+
 }
 .good-list.activated {
-  transform: translateX(0);
+  animation: x2y 600ms ease-in-out;
+
 }
 
 .libraries{
   font-size: 36px;
-  transform: translateX(-100%);
+
 }
 
 .libraries.activated{
-  transform: translateX(0);
+  animation: x2y 600ms ease-in-out;
+
 }
 
 
@@ -69,4 +72,9 @@
   }
 
   
+}
+
+@keyframes x2y {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0%); }
 }

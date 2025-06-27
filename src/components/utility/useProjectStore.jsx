@@ -3,6 +3,39 @@ import { create } from 'zustand'
 const useProjectStore = create((set) => ({
   projects : [
     {
+      title: "Project 5",
+      isAble: true,
+      type : "개인",
+      name: "차를 알아가기 with Gen AI 챗봇",
+      description:
+        "간단한 퀴즈를 통해 나온 결과를 바탕으로 Ai와 추가 질의응답",
+      contribution: "100%",
+      imageUrl: "/teaChatbot.png",
+      url: `https://dev.teadiary.pages.dev/quiz`,
+      // github: "",
+      contents:[
+        "Gemin 2.0 Flash API 활용한 Generative AI ",
+        "퀴즈를 통해 사용자 성햐 파악 후 그 추가 데이터를 활용해 데이터 생성",
+        "Engament Loop 아이디어 활용"
+      ],
+      star : 
+      [
+        {Situation : "사용자에게 취가 정보를 실시간 취가 정보 제공"},
+        {Task : "1) API Token에 대한 이해와 분배"},
+        {Action : "1) 3회라는 제한으로 더 많은 사용자에게 체험 제공"},
+        // {Result : "1) 여전히 문제는 있지만 방문자 수 조금씩 증가"},
+      ],
+      keywords: [
+        "Generative AI",
+        "Gemini 2.0 Flash API",
+        "Next JS 14+"
+      ],
+      popup:[
+        // {puddingcamp : "https://puddingcamp.com/meetups/conference2024/staffs#staff-soo-parkle"},
+        {blog : "https://life-explorer.tistory.com/549"},
+      ]
+    },
+    {
       title: "Project 4",
       isAble: true,
       type : "협업",
@@ -10,7 +43,7 @@ const useProjectStore = create((set) => ({
       description:
         "푸딩캠프에서 주최하는 컨퍼런스 홈페이지 프론트 엔드로써 참여",
       contribution: "프론트 : 100%",
-      imageUrl: ["src/asserts/puddingcamp.png"],
+      imageUrl: "/puddingcamp.png",
       url: `https://puddingcamp.com/meetups/conference2024`,
       github: "https://puddingcamp.com/meetups/conference2024/staffs#staff-soo-parkle",
       contents:[
@@ -42,7 +75,7 @@ const useProjectStore = create((set) => ({
       description:
         "DB 설계 및 DB User Table 활용, 로그인 인증 가능 숙박 사이트",
       contribution: "100%",
-      imageUrl: ["src/assets/local20240331.png"],
+      imageUrl: "/jomswimswim.png",
       url: `https://next-type-accommodation.pages.dev/`,
       github: "https://github.com/Sooparkle/project3/tree/home",
       gitServer: "https://github.com/Sooparkle/pj3_server/tree/main",
@@ -77,7 +110,7 @@ const useProjectStore = create((set) => ({
         "공공 API를 활용하여, 서울특별시 지역구별 도서 베스트 대출 목록 통신",
       contribution: "100%",
 
-      imageUrl: ["src/assets/jomswimswim.png"],
+      imageUrl: "/local20240331.png",
       url: "https://library-62r.pages.dev",
       github: "https://github.com/Sooparkle/next-accom",
       gitServer: "https://github.com/Sooparkle/pj3_server/tree/main",

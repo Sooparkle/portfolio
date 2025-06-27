@@ -7,11 +7,30 @@ import "./ContactSmall.scss";
 
 export const ContactSmall = () => {
   
+  const linkInfo = [
+    {className : "contact-github", url : "https://github.com/Sooparkle/", icon : <FaGithubSquare /> },
+    {className : "contact-blog", url : "https://life-explorer.tistory.com/", icon : <FaFilePen /> },
+    // {className : "contact-linkedin", url : "https://www.linkedin.com/in/sooohan/", icon :<FaLinkedin /> },
+
+  ]
 
   return (
       <section className="contactSmall-wrap">
         <ul>
-          <li>
+
+          {
+            linkInfo.map(({className, url, icon}) => (
+              <li key={className}>
+                <span 
+                  className={className}
+                  onClick={()=> window.open(url, "_blank")}
+                >
+                  {icon}
+                </span>
+              </li>
+            ))
+          }
+          {/* <li>
             <span
               className="contact-github"
               onClick={() =>
@@ -40,7 +59,7 @@ export const ContactSmall = () => {
             >
               <FaFilePen /> 
             </span>
-          </li>
+          </li> */}
         </ul>
       </section>
 

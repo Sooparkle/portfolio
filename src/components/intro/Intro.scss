@@ -76,28 +76,6 @@
 
   }
 
-  @keyframes identifier {
-    0%{
-      opacity: 0;
-    filter: blur(6);
-    }
-
-    70%{
-      opacity: 0.8;
-      filter: blur(4);
-    }
-
-    100%{
-      opacity: 1;
-      filter: blur(0);
-    }
-    
-  }
-
-  @keyframes underline {
-    0% {transform: scaleX(0);}
-    100% {transform: scaleX(1);}
-  }
 
   .intro-text{
     letter-spacing: -0.4px;
@@ -110,17 +88,18 @@
     line-height: 24px;
     position: relative;
     animation: translateXX 1s ease-in-out;
-
-    &::before{
-      content: " ";
-      position: absolute;
-      width: 2px;
-      height: 74px;
-      background: #fff;
-      left: -15px;
-      top: 0;
-      border-radius: 2px;
-    }
+        &::before{
+          content: " ";
+          position: absolute;
+          width: 2px;
+          height: 74px;
+          background: #fff;
+          left: -15px;
+          top: 0;
+          border-radius: 2px;
+        }
+    
+    
   }
 
   .intro-down-allow {
@@ -145,7 +124,7 @@
     padding: 0 18px;
     .intro-middle{
       place-self: center;
-      font-size: 32px;
+      font-size: 24px;
       margin-left: 0;
       text-align: center;
     }
@@ -154,10 +133,35 @@
       place-self: center;
       margin-right: 0;
       height: max-content;
-      ;
+      
+      &::before{
+        left : -11px;
+        height: 100%;
+      }
   }
   }
+  
+  .intro-wrap .intro-middle .intro-slogan-text-sm{
+    font-size: 12px;
+  }
+
+  .intro-middle{
+
+    .intro-slogan-text{
+      &::after{
+        display: none;
+      }
+    }
+  
+  }
+
+  .intro-allow{
+    bottom: 0;
+    
+  }
+
 }
+
 
 
 
@@ -218,4 +222,29 @@
     opacity: 1;
     transform: translateY(0rem);
   }
+}
+
+
+
+@keyframes identifier {
+  0%{
+    opacity: 0;
+  filter: blur(6);
+  }
+
+  70%{
+    opacity: 0.8;
+    filter: blur(4);
+  }
+
+  100%{
+    opacity: 1;
+    filter: blur(0);
+  }
+  
+}
+
+@keyframes underline {
+  0% {transform: scaleX(0);}
+  100% {transform: scaleX(1);}
 }
